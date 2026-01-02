@@ -387,7 +387,7 @@ export function GallerySection() {
             <span className="inline-flex items-center gap-3">
               <span>{t("viewAll")}</span>
               <svg
-                className="h-5 w-5"
+                className="h-5 w-5 rtl:rotate-180"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -418,7 +418,7 @@ export function GallerySection() {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="relative max-h-[90vh] max-w-[90vw] overflow-hidden rounded-2xl bg-white shadow-2xl"
+            className="relative mx-4 max-w-4xl overflow-hidden rounded-2xl bg-white shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
@@ -452,8 +452,8 @@ export function GallerySection() {
                 alt={selectedImage.alt}
                 width={1200}
                 height={800}
-                className="h-auto max-h-[70vh] w-auto max-w-full object-contain"
-                sizes="90vw"
+                className="block h-auto max-h-[70vh] w-full object-cover"
+                sizes="(max-width: 896px) 90vw, 896px"
               />
             </div>
 

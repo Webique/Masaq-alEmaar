@@ -12,9 +12,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <SkipLinks />
       <ScrollProgress />
       <Header />
-      <main id="main-content" role="main">
-        {children}
-      </main>
+      {children}
       <Footer />
       <WhatsAppFloat />
       <AccessibilityToolbar />

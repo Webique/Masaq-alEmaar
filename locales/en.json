@@ -198,17 +198,14 @@
       "info": {
         "phone": {
           "label": "Phone",
-          "value": "0507005801",
           "action": "Call Us"
         },
         "whatsapp": {
           "label": "WhatsApp",
-          "value": "0507005801",
           "action": "Message Us"
         },
         "email": {
           "label": "Email",
-          "value": "info@masaq.com",
           "action": "Email Us"
         },
         "location": {

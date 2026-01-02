@@ -47,7 +47,7 @@ export function ProcessSection() {
   ];
 
   return (
-    <section className="bg-linear-to-b from-white to-gray-50 py-16 md:py-24">
+    <section className="bg-linear-to-b max-w-svw overflow-hidden from-white to-gray-50 py-16 md:py-24">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <m.div

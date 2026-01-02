@@ -16,7 +16,7 @@ export default function IndexPage({ params }: PageProps) {
   setRequestLocale(locale as Locale);
 
   return (
-    <main>
+    <main id="main-content" role="main">
       <HeroSection />
       <AboutSection />
       <ServicesSection />

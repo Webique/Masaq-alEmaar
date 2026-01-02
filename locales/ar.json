@@ -198,17 +198,14 @@
       "info": {
         "phone": {
           "label": "الهاتف",
-          "value": "0507005801",
           "action": "اتصل بنا"
         },
         "whatsapp": {
           "label": "واتساب",
-          "value": "0507005801",
           "action": "راسلنا"
         },
         "email": {
           "label": "البريد الإلكتروني",
-          "value": "info@masaq.com",
           "action": "راسلنا"
         },
         "location": {

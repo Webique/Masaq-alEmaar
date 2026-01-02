@@ -1,5 +1,6 @@
 "use client";
 
+import { MessageCircle } from "lucide-react";
 import * as m from "motion/react-m";
 import { useTranslations } from "next-intl";
 
@@ -9,7 +10,7 @@ import EmailIcon from "@/assets/icons/email.svg";
 import InstagramIcon from "@/assets/icons/instagram.svg";
 import PhoneIcon from "@/assets/icons/phone.svg";
 import TikTokIcon from "@/assets/icons/tiktok.svg";
-import WhatsAppIcon from "@/assets/icons/whatsapp.svg";
+import WhatsAppIcon from "@/assets/icons/whatsapp-2.svg";
 
 export function ContactSection() {
   const t = useTranslations("IndexPage.contact");
@@ -18,7 +19,7 @@ export function ContactSection() {
     {
       icon: PhoneIcon,
       label: t("info.phone.label"),
-      value: t("info.phone.value"),
+      value: siteConfig.support.phone,
       action: t("info.phone.action"),
       href: `tel:${siteConfig.support.phone}`,
       color: "text-primary"
@@ -26,15 +27,15 @@ export function ContactSection() {
     {
       icon: WhatsAppIcon,
       label: t("info.whatsapp.label"),
-      value: t("info.whatsapp.value"),
+      value: siteConfig.support.whatsapp,
       action: t("info.whatsapp.action"),
       href: siteConfig.links.whatsapp,
-      color: "text-green-600"
+      color: "text-primary"
     },
     {
       icon: EmailIcon,
       label: t("info.email.label"),
-      value: t("info.email.value"),
+      value: siteConfig.support.email,
       action: t("info.email.action"),
       href: `mailto:${siteConfig.support.email}`,
       color: "text-primary"
@@ -46,13 +47,13 @@ export function ContactSection() {
       icon: InstagramIcon,
       label: t("social.instagram"),
       href: siteConfig.links.instagram,
-      color: "text-pink-600"
+      color: "text-primary"
     },
     {
       icon: TikTokIcon,
       label: t("social.tiktok"),
       href: siteConfig.links.tiktok,
-      color: "text-black"
+      color: "text-primary"
     }
   ];
 
@@ -200,9 +201,9 @@ export function ContactSection() {
             viewport={{ once: true, margin: "-100px" }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-primary text-primary-foreground hover:bg-primary/90 inline-flex items-center justify-center rounded-xl px-8 py-4 text-lg font-semibold shadow-lg transition-all duration-300 hover:shadow-xl"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 inline-flex items-center justify-center gap-2 rounded-xl px-8 py-4 text-lg font-semibold shadow-lg transition-all duration-300 hover:shadow-xl"
           >
-            <WhatsAppIcon className="mr-3 h-6 w-6" />
+            <MessageCircle className="h-6 w-6" />
             {t("cta")}
           </m.a>
         </m.div>
