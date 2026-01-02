@@ -75,7 +75,7 @@ export function ProcessSection() {
               whileInView={{ scaleX: 1 }}
               transition={{ duration: 1.5, delay: 0.3 }}
               viewport={{ once: true, margin: "-100px" }}
-              className="to-secondary from-primary bg-linear-to-r absolute left-0 right-0 top-20 h-0.5 origin-left"
+              className="to-secondary from-primary bg-linear-to-r origin-start absolute end-0 start-0 top-20 h-0.5"
             />
 
             {/* Process Steps */}
@@ -90,7 +90,7 @@ export function ProcessSection() {
                     delay: index * 0.2 + 0.5
                   }}
                   viewport={{ once: true, margin: "-100px" }}
-                  className="relative text-center"
+                  className="relative flex flex-col text-center"
                 >
                   {/* Step Number Circle */}
                   <div className="bg-primary relative z-10 mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full shadow-lg">
@@ -109,14 +109,14 @@ export function ProcessSection() {
                         delay: index * 0.2 + 0.8
                       }}
                       viewport={{ once: true, margin: "-100px" }}
-                      className="absolute -right-4 top-8 z-0"
+                      className="absolute -end-4 top-8 z-0"
                     >
                       <svg
                         width="32"
                         height="16"
                         viewBox="0 0 32 16"
                         fill="none"
-                        className="text-secondary"
+                        className="text-secondary rtl:rotate-180"
                       >
                         <path
                           d="M24 1L31 8L24 15M31 8H1"
@@ -130,11 +130,11 @@ export function ProcessSection() {
                   )}
 
                   {/* Step Content */}
-                  <div className="rounded-lg bg-white p-6 shadow-md transition-shadow duration-300 hover:shadow-lg">
+                  <div className="flex min-h-[160px] flex-1 flex-col rounded-lg bg-white p-6 shadow-md transition-shadow duration-300 hover:shadow-lg">
                     <h3 className="text-primary mb-3 text-lg font-bold leading-tight">
                       {step.title}
                     </h3>
-                    <p className="text-text-light text-sm leading-relaxed">
+                    <p className="text-text-light flex-1 text-sm leading-relaxed">
                       {step.description}
                     </p>
                   </div>
@@ -153,7 +153,7 @@ export function ProcessSection() {
               whileInView={{ scaleY: 1 }}
               transition={{ duration: 1.5, delay: 0.3 }}
               viewport={{ once: true, margin: "-100px" }}
-              className="to-secondary from-primary bg-linear-to-b absolute bottom-0 left-8 top-0 w-0.5 origin-top"
+              className="to-secondary from-primary bg-linear-to-b absolute bottom-0 start-8 top-0 w-0.5 origin-top"
             />
 
             {/* Process Steps */}
@@ -178,7 +178,7 @@ export function ProcessSection() {
                   </div>
 
                   {/* Step Content */}
-                  <div className="ml-6 flex-1 rounded-lg bg-white p-6 shadow-md transition-shadow duration-300 hover:shadow-lg">
+                  <div className="ms-6 flex-1 rounded-lg bg-white p-6 shadow-md transition-shadow duration-300 hover:shadow-lg">
                     <h3 className="text-primary mb-3 text-lg font-bold leading-tight">
                       {step.title}
                     </h3>
@@ -197,7 +197,7 @@ export function ProcessSection() {
                         delay: index * 0.2 + 0.8
                       }}
                       viewport={{ once: true, margin: "-100px" }}
-                      className="absolute -bottom-4 left-7 z-0"
+                      className="absolute -bottom-4 start-7 z-0"
                     >
                       <svg
                         width="16"
