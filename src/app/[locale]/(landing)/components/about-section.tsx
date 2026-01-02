@@ -117,7 +117,7 @@ export function AboutSection() {
                 viewport={{ once: true }}
               >
                 <ExportedImage
-                  src="/images/2jpeg"
+                  src="/images/2.jpeg"
                   alt={t("mainImageAlt")}
                   width={600}
                   height={700}
