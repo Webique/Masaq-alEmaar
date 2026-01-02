@@ -15,19 +15,19 @@ export function ServicesSection() {
     {
       key: "architectural" as const,
       icon: Building2,
-      image: "/images/WhatsApp Image 2026-01-02 at 21.21.47 (1).jpeg",
+      image: "/images/gallery/3.jpeg",
       gradient: "from-blue-500/20 to-indigo-500/20"
     },
     {
       key: "structural" as const,
       icon: Hammer,
-      image: "/images/WhatsApp Image 2026-01-02 at 21.21.46 (3).jpeg",
+      image: "/images/gallery/4.jpeg",
       gradient: "from-gray-500/20 to-slate-500/20"
     },
     {
       key: "finishing" as const,
       icon: Palette,
-      image: "/images/WhatsApp Image 2026-01-02 at 21.21.48 (2).jpeg",
+      image: "/images/gallery/5.jpeg",
       gradient: "from-amber-500/20 to-orange-500/20"
     },
     {

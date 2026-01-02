@@ -24,7 +24,7 @@ export function HeroSection() {
         aria-label={t("backgroundAlt")}
       >
         <ExportedImage
-          src="/images/1.jpeg"
+          src="/images/gallery/1.jpeg"
           alt="hero"
           fill
           className="object-cover"

@@ -25,7 +25,7 @@ export function GallerySection() {
   const galleryImages: GalleryImage[] = [
     // Residential Projects
     {
-      src: "/images/1.jpeg",
+      src: "/images/gallery/1.jpeg",
       alt: "Luxury residential villa exterior",
       category: "residential",
       title: t("images.modernVilla.title"),
@@ -39,7 +39,7 @@ export function GallerySection() {
       description: t("images.familyHome.description")
     },
     {
-      src: "/images/2.jpeg",
+      src: "/images/gallery/2.jpeg",
       alt: "Residential bedroom design",
       category: "residential",
       title: t("images.masterBedroom.title"),
@@ -85,7 +85,7 @@ export function GallerySection() {
       description: t("images.elegantInterior.description")
     },
     {
-      src: "/images/WhatsApp Image 2026-01-02 at 21.21.47 (1).jpeg",
+      src: "/images/gallery/3.jpeg",
       alt: "Modern interior living room",
       category: "interior",
       title: t("images.contemporaryLiving.title"),
@@ -122,14 +122,14 @@ export function GallerySection() {
       description: t("images.structuralFramework.description")
     },
     {
-      src: "/images/WhatsApp Image 2026-01-02 at 21.21.48 (2).jpeg",
+      src: "/images/gallery/5.jpeg",
       alt: "Construction site progress",
       category: "structural",
       title: t("images.constructionProgress.title"),
       description: t("images.constructionProgress.description")
     },
     {
-      src: "/images/WhatsApp Image 2026-01-02 at 21.21.49.jpeg",
+      src: "/images/gallery/6.jpeg",
       alt: "Completed structural work",
       category: "structural",
       title: t("images.completedStructure.title"),
