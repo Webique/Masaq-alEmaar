@@ -47,7 +47,7 @@ export function ProcessSection() {
   ];
 
   return (
-    <section className="bg-gradient-to-b from-white to-gray-50 py-16 md:py-24">
+    <section className="bg-linear-to-b from-white to-gray-50 py-16 md:py-24">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <m.div
@@ -57,13 +57,11 @@ export function ProcessSection() {
           viewport={{ once: true, margin: "-100px" }}
           className="mb-16 text-center"
         >
-          <h2 className="mb-4 text-3xl font-bold text-[var(--brand-primary)] md:text-4xl">
+          <h2 className="text-primary mb-4 text-3xl font-bold md:text-4xl">
             {t("title")}
           </h2>
-          <p className="mb-2 text-lg text-[var(--brand-text-light)]">
-            {t("subtitle")}
-          </p>
-          <p className="mx-auto max-w-2xl text-base text-[var(--brand-text-light)]">
+          <p className="text-text-light mb-2 text-lg">{t("subtitle")}</p>
+          <p className="text-text-light mx-auto max-w-2xl text-base">
             {t("description")}
           </p>
         </m.div>
@@ -77,7 +75,7 @@ export function ProcessSection() {
               whileInView={{ scaleX: 1 }}
               transition={{ duration: 1.5, delay: 0.3 }}
               viewport={{ once: true, margin: "-100px" }}
-              className="absolute left-0 right-0 top-20 h-0.5 origin-left bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)]"
+              className="bg-linear-to-r to-secondary from-primary absolute left-0 right-0 top-20 h-0.5 origin-left"
             />
 
             {/* Process Steps */}
@@ -95,7 +93,7 @@ export function ProcessSection() {
                   className="relative text-center"
                 >
                   {/* Step Number Circle */}
-                  <div className="relative z-10 mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[var(--brand-primary)] shadow-lg">
+                  <div className="bg-primary relative z-10 mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full shadow-lg">
                     <span className="text-lg font-bold text-white">
                       {step.number}
                     </span>
@@ -118,7 +116,7 @@ export function ProcessSection() {
                         height="16"
                         viewBox="0 0 32 16"
                         fill="none"
-                        className="text-[var(--brand-secondary)]"
+                        className="text-secondary rtl:rotate-180"
                       >
                         <path
                           d="M24 1L31 8L24 15M31 8H1"
@@ -133,10 +131,10 @@ export function ProcessSection() {
 
                   {/* Step Content */}
                   <div className="rounded-lg bg-white p-6 shadow-md transition-shadow duration-300 hover:shadow-lg">
-                    <h3 className="mb-3 text-lg font-bold leading-tight text-[var(--brand-primary)]">
+                    <h3 className="text-primary mb-3 text-lg font-bold leading-tight">
                       {step.title}
                     </h3>
-                    <p className="text-sm leading-relaxed text-[var(--brand-text-light)]">
+                    <p className="text-text-light text-sm leading-relaxed">
                       {step.description}
                     </p>
                   </div>
@@ -155,7 +153,7 @@ export function ProcessSection() {
               whileInView={{ scaleY: 1 }}
               transition={{ duration: 1.5, delay: 0.3 }}
               viewport={{ once: true, margin: "-100px" }}
-              className="absolute bottom-0 left-8 top-0 w-0.5 origin-top bg-gradient-to-b from-[var(--brand-primary)] to-[var(--brand-secondary)]"
+              className="bg-linear-to-b to-secondary from-primary absolute bottom-0 left-8 top-0 w-0.5 origin-top"
             />
 
             {/* Process Steps */}
@@ -173,7 +171,7 @@ export function ProcessSection() {
                   className="relative flex items-start"
                 >
                   {/* Step Number Circle */}
-                  <div className="relative z-10 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full bg-[var(--brand-primary)] shadow-lg">
+                  <div className="bg-primary relative z-10 flex h-16 w-16 shrink-0 items-center justify-center rounded-full shadow-lg">
                     <span className="text-lg font-bold text-white">
                       {step.number}
                     </span>
@@ -181,10 +179,10 @@ export function ProcessSection() {
 
                   {/* Step Content */}
                   <div className="ml-6 flex-1 rounded-lg bg-white p-6 shadow-md transition-shadow duration-300 hover:shadow-lg">
-                    <h3 className="mb-3 text-lg font-bold leading-tight text-[var(--brand-primary)]">
+                    <h3 className="text-primary mb-3 text-lg font-bold leading-tight">
                       {step.title}
                     </h3>
-                    <p className="text-sm leading-relaxed text-[var(--brand-text-light)]">
+                    <p className="text-text-light text-sm leading-relaxed">
                       {step.description}
                     </p>
                   </div>
@@ -206,7 +204,7 @@ export function ProcessSection() {
                         height="32"
                         viewBox="0 0 16 32"
                         fill="none"
-                        className="text-[var(--brand-secondary)]"
+                        className="text-secondary"
                       >
                         <path
                           d="M1 24L8 31L15 24M8 31V1"

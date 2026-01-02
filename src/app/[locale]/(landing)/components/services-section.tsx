@@ -164,7 +164,7 @@ export function ServicesSection() {
                     >
                       <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm">
                         <svg
-                          className="h-5 w-5 text-white"
+                          className="h-5 w-5 text-white rtl:rotate-180"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -208,13 +208,13 @@ export function ServicesSection() {
                               delay: 0.4 + index * 0.1 + featureIndex * 0.05
                             }}
                             viewport={{ once: true }}
-                            className="flex items-center space-x-3"
+                            className="flex items-center"
                           >
                             <div
                               className={cn(
                                 "flex h-6 w-6 items-center justify-center rounded-full",
                                 "bg-primary/10 transition-colors duration-300",
-                                "group-hover:bg-primary/20"
+                                "group-hover:bg-primary/20 ltr:mr-3 rtl:ml-3"
                               )}
                             >
                               <svg
@@ -266,7 +266,7 @@ export function ServicesSection() {
               href="#contact"
               className={cn(
                 "bg-primary hover:bg-primary-dark text-white",
-                "inline-flex items-center space-x-2 rounded-full px-8 py-4",
+                "inline-flex items-center rounded-full px-8 py-4",
                 "font-semibold transition-all duration-300",
                 "transform hover:scale-105 hover:shadow-lg"
               )}
@@ -275,7 +275,7 @@ export function ServicesSection() {
             >
               <span>{t("cta.button")}</span>
               <svg
-                className="h-5 w-5"
+                className="h-5 w-5 ltr:ml-2 rtl:mr-2 rtl:rotate-180"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

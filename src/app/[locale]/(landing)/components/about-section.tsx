@@ -210,8 +210,8 @@ export function AboutSection() {
               role="complementary"
               aria-label={t("experienceLabel")}
             >
-              <div className="flex items-center space-x-4">
-                <div className="bg-primary flex h-12 w-12 items-center justify-center rounded-full text-white">
+              <div className="flex items-center">
+                <div className="bg-primary flex h-12 w-12 items-center justify-center rounded-full text-white ltr:mr-4 rtl:ml-4">
                   <span
                     className="text-xl font-bold"
                     aria-label={t("yearsNumber")}
@@ -237,8 +237,8 @@ export function AboutSection() {
               role="complementary"
               aria-label={t("projectsLabel")}
             >
-              <div className="flex items-center space-x-4">
-                <div className="bg-secondary flex h-12 w-12 items-center justify-center rounded-full text-white">
+              <div className="flex items-center">
+                <div className="bg-secondary flex h-12 w-12 items-center justify-center rounded-full text-white ltr:mr-4 rtl:ml-4">
                   <span
                     className="text-xl font-bold"
                     aria-label={t("projectsNumber")}

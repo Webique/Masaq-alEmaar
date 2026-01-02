@@ -377,7 +377,7 @@ export function GallerySection() {
           <m.button
             className={cn(
               "bg-primary hover:bg-primary-dark text-white",
-              "inline-flex items-center space-x-3 rounded-full px-8 py-4",
+              "inline-flex items-center rounded-full px-8 py-4",
               "font-semibold transition-all duration-300",
               "hover:shadow-elegant transform hover:scale-105"
             )}
@@ -386,7 +386,7 @@ export function GallerySection() {
           >
             <span>{t("viewAll")}</span>
             <svg
-              className="h-5 w-5"
+              className="h-5 w-5 ltr:ml-3 rtl:mr-3 rtl:rotate-180"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -457,7 +457,7 @@ export function GallerySection() {
 
             {/* Image Info */}
             <div className="p-6">
-              <div className="mb-2 flex items-center justify-between">
+              <div className="mb-2 flex items-center justify-between gap-2">
                 <h3 className="text-primary text-2xl font-bold">
                   {selectedImage.title}
                 </h3>

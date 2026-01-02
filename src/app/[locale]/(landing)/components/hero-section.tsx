@@ -37,9 +37,9 @@ export function HeroSection() {
           aria-hidden="true"
         />
         {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
+        <div className="bg-linear-to-r absolute inset-0 from-black/70 via-black/50 to-black/30" />
         {/* Brand color overlay */}
-        <div className="from-primary/20 to-primary/10 absolute inset-0 bg-gradient-to-br via-transparent" />
+        <div className="from-primary/20 to-primary/10 bg-linear-to-br absolute inset-0 via-transparent" />
       </div>
 
       {/* Decorative Elements */}
@@ -73,7 +73,7 @@ export function HeroSection() {
             })}
             className={cn(
               "mb-4 text-5xl font-bold md:text-7xl lg:text-8xl",
-              "bg-gradient-to-r from-white via-white to-white/90 bg-clip-text text-transparent",
+              "bg-linear-to-r from-white via-white to-white/90 bg-clip-text text-transparent",
               "drop-shadow-2xl"
             )}
           >
@@ -207,7 +207,7 @@ export function HeroSection() {
       </div>
 
       {/* Bottom gradient fade */}
-      <div className="from-background absolute bottom-0 left-0 right-0 z-10 h-32 bg-gradient-to-t to-transparent" />
+      <div className="from-background bg-linear-to-t absolute bottom-0 left-0 right-0 z-10 h-32 to-transparent" />
     </section>
   );
 }
