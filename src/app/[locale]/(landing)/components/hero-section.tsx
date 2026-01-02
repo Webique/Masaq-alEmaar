@@ -14,7 +14,7 @@ export function HeroSection() {
 
   return (
     <section
-      className="relative flex min-h-screen items-center justify-center overflow-hidden"
+      className="relative flex min-h-[800px] items-center justify-center overflow-hidden sm:min-h-[600px] lg:min-h-screen"
       aria-labelledby="hero-title"
     >
       {/* Background Image with Overlay */}
