@@ -50,7 +50,7 @@ export function HeroSection() {
       </div>
 
       {/* Main Content */}
-      <div className="container relative z-20 mx-auto px-4 py-20 pt-28 sm:pt-36">
+      <div className="container relative z-20 mx-auto px-4 py-20 pt-16 sm:pt-36">
         <m.div
           className="mx-auto max-w-4xl text-center text-white"
           initial={{ opacity: 0 }}
