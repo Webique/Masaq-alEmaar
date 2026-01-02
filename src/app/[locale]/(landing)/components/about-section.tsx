@@ -10,27 +10,31 @@ export function AboutSection() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden py-20 lg:py-32"
+      className="bg-background relative overflow-hidden py-20 lg:py-32"
       aria-labelledby="about-title"
     >
       {/* Background Pattern */}
       <div
-        className="pattern-dots absolute inset-0 opacity-30"
+        className="absolute inset-0 z-0 opacity-60"
+        style={{
+          backgroundImage: `radial-gradient(circle, rgba(5, 31, 53, 0.2) 2px, transparent 2px)`,
+          backgroundSize: "30px 30px"
+        }}
         aria-hidden="true"
       />
 
       {/* Decorative Elements */}
       <div
-        className="animate-blob bg-primary/5 absolute left-0 top-1/4 h-64 w-64 rounded-full blur-3xl"
+        className="animate-blob bg-primary/20 absolute left-0 top-1/4 z-0 h-64 w-64 rounded-full blur-3xl"
         aria-hidden="true"
       />
       <div
-        className="animation-delay-2000 animate-blob bg-secondary/5 absolute bottom-1/4 right-0 h-48 w-48 rounded-full blur-3xl"
+        className="animation-delay-2000 animate-blob bg-secondary/20 absolute bottom-1/4 right-0 z-0 h-48 w-48 rounded-full blur-3xl"
         aria-hidden="true"
       />
 
-      <div className="container relative mx-auto px-4">
-        <div className="grid gap-16 lg:grid-cols-2 lg:gap-20">
+      <div className="container relative z-10 mx-auto px-4">
+        <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-20">
           {/* Content Side */}
           <m.div
             initial={{ opacity: 0, x: -50 }}
@@ -47,7 +51,8 @@ export function AboutSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="text-primary text-3xl font-bold md:text-4xl lg:text-5xl"
+                className="text-3xl font-bold md:text-4xl lg:text-5xl"
+                style={{ color: "var(--brand-primary)" }}
               >
                 {t("title")}
               </m.h2>
@@ -57,7 +62,8 @@ export function AboutSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="text-light text-lg md:text-xl"
+                className="text-lg md:text-xl"
+                style={{ color: "var(--brand-text-light)" }}
               >
                 {t("subtitle")}
               </m.p>
@@ -71,15 +77,24 @@ export function AboutSection() {
               viewport={{ once: true }}
               className="space-y-6"
             >
-              <p className="text text-base leading-relaxed md:text-lg">
+              <p
+                className="text-base leading-relaxed md:text-lg"
+                style={{ color: "var(--brand-text)" }}
+              >
                 {t("story")}
               </p>
 
-              <p className="text text-base leading-relaxed md:text-lg">
+              <p
+                className="text-base leading-relaxed md:text-lg"
+                style={{ color: "var(--brand-text)" }}
+              >
                 {t("methodology")}
               </p>
 
-              <p className="text text-base leading-relaxed md:text-lg">
+              <p
+                className="text-base leading-relaxed md:text-lg"
+                style={{ color: "var(--brand-text)" }}
+              >
                 {t("commitment")}
               </p>
             </m.div>
@@ -112,7 +127,13 @@ export function AboutSection() {
               </m.div>
 
               {/* Image Overlay */}
-              <div className="from-primary/20 bg-linear-to-t absolute inset-0 via-transparent to-transparent" />
+              <div
+                className="absolute inset-0"
+                style={{
+                  background:
+                    "linear-gradient(to top, rgba(5, 31, 53, 0.2), transparent, transparent)"
+                }}
+              />
             </div>
 
             {/* Floating Elements */}
@@ -125,8 +146,11 @@ export function AboutSection() {
               role="complementary"
               aria-label={t("experienceLabel")}
             >
-              <div className="flex items-center">
-                <div className="bg-primary mr-4 flex h-12 w-12 items-center justify-center rounded-full text-white">
+              <div className="flex items-center gap-2">
+                <div
+                  className="mr-4 flex h-12 w-12 items-center justify-center rounded-full text-white"
+                  style={{ backgroundColor: "var(--brand-primary)" }}
+                >
                   <span
                     className="text-xl font-bold"
                     aria-label={t("yearsNumber")}
@@ -135,8 +159,18 @@ export function AboutSection() {
                   </span>
                 </div>
                 <div>
-                  <p className="primary text-sm font-semibold">{t("years")}</p>
-                  <p className="text-light text-xs">{t("experience")}</p>
+                  <p
+                    className="text-sm font-semibold"
+                    style={{ color: "var(--brand-primary)" }}
+                  >
+                    {t("years")}
+                  </p>
+                  <p
+                    className="text-xs"
+                    style={{ color: "var(--brand-text-light)" }}
+                  >
+                    {t("experience")}
+                  </p>
                 </div>
               </div>
             </m.div>
@@ -150,8 +184,11 @@ export function AboutSection() {
               role="complementary"
               aria-label={t("projectsLabel")}
             >
-              <div className="flex items-center">
-                <div className="bg-secondary mr-4 flex h-12 w-12 items-center justify-center rounded-full text-white">
+              <div className="flex items-center gap-2">
+                <div
+                  className="mr-4 flex h-12 w-12 items-center justify-center rounded-full text-white"
+                  style={{ backgroundColor: "var(--brand-secondary)" }}
+                >
                   <span
                     className="text-xl font-bold"
                     aria-label={t("projectsNumber")}
@@ -160,62 +197,39 @@ export function AboutSection() {
                   </span>
                 </div>
                 <div>
-                  <p className="secondary text-sm font-semibold">
+                  <p
+                    className="text-sm font-semibold"
+                    style={{ color: "var(--brand-secondary)" }}
+                  >
                     {t("projects")}
                   </p>
-                  <p className="text-light text-xs">{t("completed")}</p>
+                  <p
+                    className="text-xs"
+                    style={{ color: "var(--brand-text-light)" }}
+                  >
+                    {t("completed")}
+                  </p>
                 </div>
               </div>
             </m.div>
 
             {/* Decorative Shapes */}
             <div
-              className="bg-primary/10 absolute left-1/2 top-1/2 -z-10 h-32 w-32 -translate-x-1/2 -translate-y-1/2 animate-pulse rounded-full blur-2xl"
+              className="bg-primary/20 absolute left-1/2 top-1/2 -z-10 h-32 w-32 -translate-x-1/2 -translate-y-1/2 animate-pulse rounded-full blur-2xl"
+              aria-hidden="true"
+            />
+
+            {/* Additional decorative elements for better visibility */}
+            <div
+              className="bg-secondary/10 absolute -bottom-4 -right-4 h-20 w-20 rounded-full blur-xl"
+              aria-hidden="true"
+            />
+            <div
+              className="bg-primary/10 absolute -left-4 -top-4 h-16 w-16 rounded-full blur-lg"
               aria-hidden="true"
             />
           </m.div>
         </div>
-
-        {/* Bottom Section - Additional Images */}
-        <m.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.4 }}
-          viewport={{ once: true }}
-          className="mt-20 grid grid-cols-2 gap-6 md:grid-cols-4"
-          role="list"
-          aria-label={t("projectGalleryLabel")}
-        >
-          {[
-            "/images/WhatsApp Image 2026-01-02 at 21.21.45 (2).jpeg",
-            "/images/WhatsApp Image 2026-01-02 at 21.21.45 (3).jpeg",
-            "/images/WhatsApp Image 2026-01-02 at 21.21.46 (1).jpeg",
-            "/images/WhatsApp Image 2026-01-02 at 21.21.46 (2).jpeg"
-          ].map((image, index) => (
-            <m.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.6,
-                delay: 1.5 + index * 0.1
-              }}
-              viewport={{ once: true }}
-              className="group relative overflow-hidden rounded-xl"
-              role="listitem"
-            >
-              <ExportedImage
-                src={image}
-                alt={`${t("projectGalleryLabel")} ${index + 1}`}
-                width={300}
-                height={200}
-                className="h-32 w-full object-cover transition-transform duration-500 group-hover:scale-110 md:h-40"
-                sizes="(max-width: 768px) 50vw, 25vw"
-              />
-              <div className="from-primary/40 bg-linear-to-t absolute inset-0 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-            </m.div>
-          ))}
-        </m.div>
       </div>
     </section>
   );
