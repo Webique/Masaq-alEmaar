@@ -24,8 +24,8 @@ export function HeroSection() {
         aria-label={t("backgroundAlt")}
       >
         <ExportedImage
-          src="/images/WhatsApp Image 2026-01-02 at 21.21.44.jpeg"
-          alt=""
+          src="/images/1.jpeg"
+          alt="hero"
           fill
           className="object-cover"
           priority

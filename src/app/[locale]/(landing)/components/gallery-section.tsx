@@ -25,7 +25,7 @@ export function GallerySection() {
   const galleryImages: GalleryImage[] = [
     // Residential Projects
     {
-      src: "/images/WhatsApp Image 2026-01-02 at 21.21.44.jpeg",
+      src: "/images/1.jpeg",
       alt: "Luxury residential villa exterior",
       category: "residential",
       title: t("images.modernVilla.title"),
@@ -39,7 +39,7 @@ export function GallerySection() {
       description: t("images.familyHome.description")
     },
     {
-      src: "/images/WhatsApp Image 2026-01-02 at 21.21.45 (1).jpeg",
+      src: "/images/2.jpeg",
       alt: "Residential bedroom design",
       category: "residential",
       title: t("images.masterBedroom.title"),
