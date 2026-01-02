@@ -33,8 +33,8 @@ export default function Header() {
     { label: t("nav.home"), href: "/" },
     { label: t("nav.about"), href: "#about" },
     { label: t("nav.services"), href: "#services" },
-    { label: t("nav.testimonials"), href: "#testimonials" },
-    { label: t("nav.faq"), href: "#faq" },
+    { label: t("nav.gallery"), href: "#gallery" },
+    { label: t("nav.process"), href: "#process" },
     { label: t("nav.contact"), href: "#contact" }
   ];
 
@@ -51,7 +51,7 @@ export default function Header() {
       {/* Top accent line */}
       <div
         className={cn(
-          "bg-linear-to-r from-law-primary via-law-accent to-law-primary absolute inset-x-0 top-0 h-1 transition-opacity duration-500",
+          "bg-linear-to-r from-primary via-accent to-primary absolute inset-x-0 top-0 h-1 transition-opacity duration-500",
           "opacity-100 lg:opacity-0",
           isScrolled && "lg:opacity-100"
         )}
@@ -86,8 +86,8 @@ export default function Header() {
                 <Link
                   href={item.href}
                   className={cn(
-                    "text-law-secondary hover:text-law-primary group relative px-4 py-2 text-sm font-medium transition-all duration-300",
-                    "hover:bg-law-primary/10 focus:ring-law-primary rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2"
+                    "text-secondary hover:text-primary group relative px-4 py-2 text-sm font-medium transition-all duration-300",
+                    "hover:bg-primary/10 focus:ring-primary rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2"
                   )}
                 >
                   <span className="relative z-10">{item.label}</span>
@@ -107,7 +107,7 @@ export default function Header() {
 
             <Button
               size="lg"
-              className="bg-law-primary shadow-law-primary/30 hover:bg-law-primary-dark hover:shadow-law-primary/40 focus:ring-law-primary group h-10 min-w-[100px] gap-2 rounded-full px-4 text-xs font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 sm:h-11 sm:min-w-[110px] sm:px-6 sm:text-sm"
+              className="bg-primary shadow-primary/30 hover:bg-primary-dark hover:shadow-primary/40 focus:ring-primary group h-10 min-w-[100px] gap-2 rounded-full px-4 text-xs font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 sm:h-11 sm:min-w-[110px] sm:px-6 sm:text-sm"
               asChild
             >
               <Link
@@ -130,7 +130,7 @@ export default function Header() {
             <LocaleSwitcher className="w-auto" />
 
             <button
-              className="text-law-secondary hover:bg-law-primary/10 focus:ring-law-primary rounded-lg p-2 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2"
+              className="text-secondary hover:bg-primary/10 focus:ring-primary rounded-lg p-2 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2"
               onClick={toggleMenu}
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={isMenuOpen}
@@ -191,7 +191,7 @@ export default function Header() {
                 <Link
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-law-secondary hover:bg-law-primary/10 hover:text-law-primary focus:ring-law-primary block rounded-xl px-4 py-3 text-base font-medium transition-all focus:outline-none focus:ring-2 focus:ring-offset-2"
+                  className="text-secondary hover:bg-primary/10 hover:text-primary focus:ring-primary block rounded-xl px-4 py-3 text-base font-medium transition-all focus:outline-none focus:ring-2 focus:ring-offset-2"
                 >
                   {item.label}
                 </Link>
@@ -209,7 +209,7 @@ export default function Header() {
               className="mt-3 px-4 pt-3 sm:mt-4 sm:pt-4"
             >
               <Button
-                className="bg-law-primary hover:bg-law-primary-dark focus:ring-law-primary h-11 w-full gap-3 rounded-xl text-base font-semibold text-white shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 sm:h-12"
+                className="bg-primary hover:bg-primary-dark focus:ring-primary h-11 w-full gap-3 rounded-xl text-base font-semibold text-white shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 sm:h-12"
                 asChild
               >
                 <a

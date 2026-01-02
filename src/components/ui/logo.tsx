@@ -18,7 +18,7 @@ export default function Logo({
   height = 504,
   className,
   imgClassName,
-  href = "/",
+  href = "/"
 }: indexProps) {
   return (
     <I18nLink
@@ -29,7 +29,7 @@ export default function Logo({
       <ExportedImage
         className={cn(
           "h-auto w-20 max-w-full overflow-hidden sm:w-24",
-          imgClassName,
+          imgClassName
         )}
         src={src}
         width={width}

@@ -1,23 +1,35 @@
 export const siteConfig = {
+  company: {
+    name: "Masaq Al-Amaar",
+    nameAr: "مساق الأعمار",
+    tagline: "Building Excellence, Creating Dreams",
+    taglineAr: "نبني التميز، نحقق الأحلام",
+    description:
+      "Professional construction and architecture company specializing in integrated design and implementation of residential and commercial projects",
+    descriptionAr:
+      "شركة إنشاءات ومعمار متخصصة في التصميم والتنفيذ المتكامل للمشاريع السكنية والتجارية"
+  },
+
   links: {
-    instagram: "#",
-    snapchat: "https://snapchat.com/add/zimam_905",
-    twitter: "https://twitter.com/Zimam0905",
+    instagram: "https://instagram.com/masaq.al",
+    tiktok: "https://tiktok.com/@.masaq",
     whatsapp:
-      "https://wa.me/966560008905?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%20%D8%A8%D9%83%20%D9%81%D9%8A%20%D8%B2%D9%85%D8%A7%D9%85%20%D8%A7%D9%84%D8%B1%D8%A3%D9%8A%20%D9%84%D9%84%D9%85%D8%AD%D8%A7%D9%85%D8%A7%D8%A9"
+      "https://wa.me/966507005801?text=مرحباً%20بك%20في%20مساق%20الأعمار%20للإنشاءات%20والمعمار"
   },
 
   support: {
-    phone: "0560008905",
-    email: "info@zimam-alrai.com",
-    whatsapp: "0560008905",
+    phone: "0507005801",
+    email: "info@masaq.com",
+    whatsapp: "0507005801",
     landline: ""
   },
 
   location: {
-    city: "Dammam",
-    district: "Al-Husam",
-    country: "Saudi Arabia"
+    city: "Jeddah",
+    cityAr: "جدة",
+    district: "",
+    country: "Saudi Arabia",
+    countryAr: "المملكة العربية السعودية"
   },
 
   url: process.env.NEXT_PUBLIC_SITE_URL!,

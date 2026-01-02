@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: { params: Params }) {
   return {
     title: {
       default: t("name"),
-      template: `%s | ${t("short_name")}`,
+      template: `%s | ${t("short_name")}`
     },
     description: t("description"),
     applicationName: t("name"),
@@ -38,10 +38,10 @@ export async function generateMetadata({ params }: { params: Params }) {
       url: siteConfig.url,
       title: {
         default: t("name"),
-        template: `%s | ${t("short_name")}`,
+        template: `%s | ${t("short_name")}`
       },
       description: t("description"),
-      siteName: t("name"),
+      siteName: t("name")
       // images: [
       //   {
       //     url: siteConfig.ogImage,
@@ -55,9 +55,9 @@ export async function generateMetadata({ params }: { params: Params }) {
       card: "summary",
       title: {
         default: t("name"),
-        template: `%s | ${t("short_name")}`,
+        template: `%s | ${t("short_name")}`
       },
-      description: t("description"),
+      description: t("description")
       // images: [siteConfig.ogImage],
       // creator: siteConfig.twitter
     },
@@ -69,8 +69,8 @@ export async function generateMetadata({ params }: { params: Params }) {
         follow: process.env.NEXT_PUBLIC_INDEXING_ENABLED === "true",
         "max-video-preview": -1,
         "max-image-preview": "large",
-        "max-snippet": -1,
-      },
+        "max-snippet": -1
+      }
     },
     icons: {
       icon: [
@@ -78,33 +78,33 @@ export async function generateMetadata({ params }: { params: Params }) {
         {
           url: "/favicon/web-app-manifest-192x192.png",
           sizes: "192x192",
-          type: "image/png",
+          type: "image/png"
         },
         {
           url: "/favicon/web-app-manifest-512x512.png",
           sizes: "512x512",
-          type: "image/png",
-        },
+          type: "image/png"
+        }
       ],
       apple: [
         {
           url: "/favicon/apple-touch-icon.png",
           sizes: "180x180",
-          type: "image/png",
-        },
-      ],
+          type: "image/png"
+        }
+      ]
     },
     // manifest: "/manifest.json",
     metadataBase: new URL(siteConfig.url),
     formatDetection: {
-      telephone: false,
-    },
+      telephone: false
+    }
   };
 }
 
 export default async function LocaleLayout({
   children,
-  params,
+  params
 }: LayoutProps<"/[locale]">) {
   // Ensure that the incoming `locale` is valid
   const { locale } = await params;
