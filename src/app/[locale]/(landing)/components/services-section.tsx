@@ -41,14 +41,23 @@ export function ServicesSection() {
   return (
     <section id="services" className="relative overflow-hidden py-20 lg:py-32">
       {/* Background Elements */}
-      <div className="pattern-grid absolute inset-0 opacity-20" />
-      <div className="bg-background-alt absolute inset-0" />
+      <div
+        className="absolute inset-0 z-0 opacity-50"
+        style={{
+          backgroundImage: `
+            linear-gradient(rgba(5, 31, 53, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(5, 31, 53, 0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: "40px 40px"
+        }}
+      />
+      <div className="bg-background-alt absolute inset-0 z-0" />
 
       {/* Decorative Blobs */}
-      <div className="animate-blob bg-primary/5 absolute left-1/4 top-0 h-72 w-72 rounded-full blur-3xl" />
-      <div className="animation-delay-4000 animate-blob bg-secondary/5 absolute bottom-0 right-1/4 h-64 w-64 rounded-full blur-3xl" />
+      <div className="animate-blob bg-primary/15 absolute left-1/4 top-0 z-0 h-72 w-72 rounded-full blur-3xl" />
+      <div className="animation-delay-4000 animate-blob bg-secondary/15 absolute bottom-0 right-1/4 z-0 h-64 w-64 rounded-full blur-3xl" />
 
-      <div className="layout relative">
+      <div className="layout relative z-10">
         {/* Section Header */}
         <m.div
           initial={{ opacity: 0, y: 30 }}
@@ -154,30 +163,6 @@ export function ServicesSection() {
                         <service.icon className="h-8 w-8 text-gray-700" />
                       </div>
                     </div>
-
-                    {/* Hover Effect Indicator */}
-                    <div
-                      className={cn(
-                        "absolute bottom-4 right-4 opacity-0 transition-all duration-300",
-                        "translate-x-2 group-hover:translate-x-0 group-hover:opacity-100"
-                      )}
-                    >
-                      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm">
-                        <svg
-                          className="h-5 w-5 text-white"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M9 5l7 7-7 7"
-                          />
-                        </svg>
-                      </div>
-                    </div>
                   </div>
 
                   {/* Service Content */}
@@ -208,7 +193,7 @@ export function ServicesSection() {
                               delay: 0.4 + index * 0.1 + featureIndex * 0.05
                             }}
                             viewport={{ once: true }}
-                            className="flex items-center"
+                            className="flex items-center gap-2"
                           >
                             <div
                               className={cn(
