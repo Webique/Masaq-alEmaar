@@ -1,0 +1,73 @@
+{
+  "IndexPage": {
+    "hero": {},
+    "WhatsAppFloat": {
+      "tooltip": "Contact us via WhatsApp"
+    }
+  },
+  "Error": {
+    "title": "Sorry, an unexpected error occurred!",
+    "description": "<p>We apologize for this error we encountered.</p><p>You can try <retry>reloading the page</retry> you were visiting.</p>"
+  },
+  "NotFoundPage": {
+    "title": "Page not found",
+    "description": "Sorry, please check the address bar in your browser or use the navigation to go to a known page.",
+    "retryButton": "Try again",
+    "contactSupport": "Contact support",
+    "goBack": "Go back",
+    "backToHome": "Back to home"
+  },
+  "LocaleLayout": {
+    "name": "Zimam Al-Rai | Specialized Law Firm",
+    "short_name": "Zimam Al-Rai",
+    "description": "Zimam Al-Rai - Specialized law firm for comprehensive legal services, official documentation, contracts and agreements, legal representation and legal consultations in Dammam",
+    "keywords": [
+      "Zimam Al-Rai",
+      "law firm",
+      "legal services",
+      "documentation",
+      "contracts",
+      "legal representation",
+      "legal consultations",
+      "Dammam",
+      "Saudi Arabia"
+    ]
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, ar {🇸🇦 Arabic} en {🇺🇸 English} other {Unknown}}"
+  },
+  "Header": {
+    "nav": {
+      "home": "Home",
+      "about": "About Us",
+      "services": "Services",
+      "testimonials": "Testimonials",
+      "faq": "FAQ",
+      "contact": "Contact"
+    },
+    "cta": "Contact Us",
+    "siteName": "Zimam Al-Rai",
+    "siteDescription": "Law Firm"
+  },
+  "Footer": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "testimonials": "Testimonials",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "quickLinks": "Quick Links",
+    "contactUs": "Contact Us",
+    "connectWithUs": "Follow Us",
+    "phone": "Phone",
+    "whatsapp": "WhatsApp",
+    "location": "Dammam - Al-Husam District",
+    "brandName": "Zimam Al-Rai",
+    "copyright": "© {year} Zimam Al-Rai. All rights reserved",
+    "allRightsReserved": "All rights reserved",
+    "companyDescription": "Specialized law firm providing comprehensive legal services focused on legal prevention and good governance to protect our clients' interests and achieve their goals.",
+    "followUs": "Follow Us",
+    "tagline": "Your Trusted Legal Partner"
+  }
+}
