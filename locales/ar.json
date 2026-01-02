@@ -294,23 +294,6 @@
     "followUs": "تابعنا على",
     "tagline": "نبني التميز، نحقق الأحلام"
   },
-  "Accessibility": {
-    "title": "إعدادات إمكانية الوصول",
-    "openToolbar": "فتح شريط أدوات إمكانية الوصول",
-    "closeToolbar": "إغلاق شريط أدوات إمكانية الوصول",
-    "fontSize": "حجم الخط",
-    "normal": "عادي",
-    "large": "كبير",
-    "extraLarge": "كبير جداً",
-    "highContrast": "تباين عالي",
-    "reducedMotion": "حركة مقللة",
-    "keyboardNavigation": "التنقل بلوحة المفاتيح",
-    "on": "مفعل",
-    "off": "معطل",
-    "active": "نشط",
-    "inactive": "غير نشط",
-    "instructions": "استخدم Tab للتنقل، Enter لتفعيل الأزرار، و Escape لإغلاق النوافذ."
-  },
   "SkipLinks": {
     "mainContent": "انتقل إلى المحتوى الرئيسي",
     "navigation": "انتقل إلى التنقل",

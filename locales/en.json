@@ -294,23 +294,6 @@
     "followUs": "Follow Us",
     "tagline": "Building Excellence, Creating Dreams"
   },
-  "Accessibility": {
-    "title": "Accessibility Settings",
-    "openToolbar": "Open accessibility toolbar",
-    "closeToolbar": "Close accessibility toolbar",
-    "fontSize": "Font Size",
-    "normal": "Normal",
-    "large": "Large",
-    "extraLarge": "Extra Large",
-    "highContrast": "High Contrast",
-    "reducedMotion": "Reduced Motion",
-    "keyboardNavigation": "Keyboard Navigation",
-    "on": "On",
-    "off": "Off",
-    "active": "Active",
-    "inactive": "Inactive",
-    "instructions": "Use Tab to navigate, Enter to activate buttons, and Escape to close dialogs."
-  },
   "SkipLinks": {
     "mainContent": "Skip to main content",
     "navigation": "Skip to navigation",

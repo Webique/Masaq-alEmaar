@@ -430,12 +430,34 @@ html {
 
 /* Accessibility: Font size adjustments */
 .font-large {
-  font-size: 1.125em;
+  font-size: 1.125em !important;
 }
 
-.font-extra-large {
-  font-size: 1.25em;
+.font-large * {
+  font-size: 1.125em !important;
 }
+
+.font-large h1 { font-size: calc(2.25rem * 1.125) !important; }
+.font-large h2 { font-size: calc(1.875rem * 1.125) !important; }
+.font-large h3 { font-size: calc(1.5rem * 1.125) !important; }
+.font-large h4 { font-size: calc(1.25rem * 1.125) !important; }
+.font-large h5 { font-size: calc(1.125rem * 1.125) !important; }
+.font-large h6 { font-size: calc(1rem * 1.125) !important; }
+
+.font-extra-large {
+  font-size: 1.25em !important;
+}
+
+.font-extra-large * {
+  font-size: 1.25em !important;
+}
+
+.font-extra-large h1 { font-size: calc(2.25rem * 1.25) !important; }
+.font-extra-large h2 { font-size: calc(1.875rem * 1.25) !important; }
+.font-extra-large h3 { font-size: calc(1.5rem * 1.25) !important; }
+.font-extra-large h4 { font-size: calc(1.25rem * 1.25) !important; }
+.font-extra-large h5 { font-size: calc(1.125rem * 1.25) !important; }
+.font-extra-large h6 { font-size: calc(1rem * 1.25) !important; }
 
 /* Accessibility: Skip links */
 .skip-link {
