@@ -6,7 +6,13 @@
       "tagline": "Building Excellence, Creating Dreams",
       "description": "Professional construction and architecture company specializing in integrated design and implementation of residential and commercial projects with the highest standards of quality and excellence in Jeddah and Saudi Arabia",
       "cta": "Contact Us Now",
-      "ctaSecondary": "Explore Our Work"
+      "ctaSecondary": "Explore Our Work",
+      "backgroundAlt": "Masaq Al-Amaar construction project background",
+      "ctaAriaLabel": "Contact Masaq Al-Amaar via WhatsApp",
+      "ctaSecondaryAriaLabel": "Navigate to project gallery section",
+      "ctaGroup": "Main call-to-action buttons",
+      "scrollIndicatorLabel": "Scroll to about section",
+      "scrollDown": "Scroll Down"
     },
     "about": {
       "title": "About Us",
@@ -14,22 +20,41 @@
       "story": "Masaq Al-Amaar is a leading company in construction and architecture, founded with a clear vision to provide integrated solutions in design and implementation for residential and commercial projects. We believe that every project is a unique story that deserves exceptional attention and care.",
       "methodology": "We follow a precise scientific methodology in all work phases, from initial consultation to final delivery, focusing on quality and commitment to specified timelines.",
       "commitment": "Our commitment to quality and excellence is not just a slogan, but a way of life we apply in every detail of our work, from selecting the best materials to employing the most skilled craftsmen and engineers.",
+      "mainImageAlt": "Masaq Al-Amaar construction excellence showcase",
+      "valuesLabel": "Company core values",
+      "experienceLabel": "Years of experience indicator",
+      "projectsLabel": "Completed projects indicator",
+      "projectGalleryLabel": "Sample project gallery",
+      "yearsNumber": "15 years",
+      "projectsNumber": "100 projects",
+      "years": "Years",
+      "experience": "Experience",
+      "projects": "Projects",
+      "completed": "Completed",
+      "projectImage1Alt": "Residential construction project example 1",
+      "projectImage2Alt": "Commercial construction project example 2",
+      "projectImage3Alt": "Interior design project example 3",
+      "projectImage4Alt": "Structural work project example 4",
       "values": {
         "quality": {
           "title": "Quality",
-          "description": "We use the finest materials and modern techniques"
+          "description": "We use the finest materials and modern techniques",
+          "iconLabel": "Construction quality icon"
         },
         "innovation": {
           "title": "Innovation",
-          "description": "We provide innovative solutions that meet our clients' needs"
+          "description": "We provide innovative solutions that meet our clients' needs",
+          "iconLabel": "Innovation lightbulb icon"
         },
         "trust": {
           "title": "Trust",
-          "description": "We build long-term relationships with our clients"
+          "description": "We build long-term relationships with our clients",
+          "iconLabel": "Trust handshake icon"
         },
         "excellence": {
           "title": "Excellence",
-          "description": "We strive for superiority in every project we undertake"
+          "description": "We strive for superiority in every project we undertake",
+          "iconLabel": "Excellence star icon"
         }
       }
     },
@@ -78,6 +103,11 @@
             "After-Delivery Service"
           ]
         }
+      },
+      "cta": {
+        "title": "Ready to Start Your Project?",
+        "description": "Contact us today to discuss your construction and architecture needs. Our team is ready to bring your vision to life.",
+        "button": "Get Started"
       }
     },
     "process": {
@@ -118,7 +148,70 @@
         "structural": "Structural Work"
       },
       "viewAll": "View All Work",
-      "viewProject": "View Project"
+      "viewProject": "View Project",
+      "allProjects": "All Projects",
+      "images": {
+        "modernVilla": {
+          "title": "Modern Villa Design",
+          "description": "Contemporary residential architecture with elegant finishes"
+        },
+        "familyHome": {
+          "title": "Family Home Interior",
+          "description": "Spacious and comfortable family living areas"
+        },
+        "masterBedroom": {
+          "title": "Master Bedroom Suite",
+          "description": "Luxurious bedroom with modern amenities"
+        },
+        "modernKitchen": {
+          "title": "Modern Kitchen Design",
+          "description": "Functional and stylish kitchen space"
+        },
+        "officeComplex": {
+          "title": "Office Complex",
+          "description": "Modern commercial building with professional design"
+        },
+        "businessCenter": {
+          "title": "Business Center Interior",
+          "description": "Professional workspace with contemporary finishes"
+        },
+        "retailShowroom": {
+          "title": "Retail Showroom",
+          "description": "Attractive commercial space for retail business"
+        },
+        "elegantInterior": {
+          "title": "Elegant Interior Design",
+          "description": "Sophisticated interior with premium materials"
+        },
+        "contemporaryLiving": {
+          "title": "Contemporary Living Space",
+          "description": "Modern interior design with clean lines"
+        },
+        "diningRoom": {
+          "title": "Dining Room Design",
+          "description": "Elegant dining space with custom furniture"
+        },
+        "luxuryBathroom": {
+          "title": "Luxury Bathroom",
+          "description": "Premium bathroom with modern fixtures"
+        },
+        "foundationWork": {
+          "title": "Foundation Work",
+          "description": "Professional foundation and structural construction"
+        },
+        "structuralFramework": {
+          "title": "Structural Framework",
+          "description": "Reinforced concrete structure construction"
+        },
+        "constructionProgress": {
+          "title": "Construction Progress",
+          "description": "Professional construction management and execution"
+        },
+        "completedStructure": {
+          "title": "Completed Structure",
+          "description": "High-quality structural work completion"
+        }
+      }
     },
     "contact": {
       "title": "Contact Us",
@@ -202,6 +295,7 @@
       "contact": "Contact"
     },
     "cta": "Contact Us",
+    "ctaAria": "Contact us via WhatsApp",
     "siteName": "Masaq Al-Amaar",
     "siteDescription": "Construction & Architecture"
   },
@@ -224,5 +318,29 @@
     "companyDescription": "Professional construction and architecture company specializing in integrated design and implementation of residential and commercial projects with excellence and quality.",
     "followUs": "Follow Us",
     "tagline": "Building Excellence, Creating Dreams"
+  },
+  "Accessibility": {
+    "title": "Accessibility Settings",
+    "openToolbar": "Open accessibility toolbar",
+    "closeToolbar": "Close accessibility toolbar",
+    "fontSize": "Font Size",
+    "normal": "Normal",
+    "large": "Large",
+    "extraLarge": "Extra Large",
+    "highContrast": "High Contrast",
+    "reducedMotion": "Reduced Motion",
+    "keyboardNavigation": "Keyboard Navigation",
+    "on": "On",
+    "off": "Off",
+    "active": "Active",
+    "inactive": "Inactive",
+    "instructions": "Use Tab to navigate, Enter to activate buttons, and Escape to close dialogs."
+  },
+  "SkipLinks": {
+    "mainContent": "Skip to main content",
+    "navigation": "Skip to navigation",
+    "services": "Skip to services",
+    "gallery": "Skip to gallery",
+    "contact": "Skip to contact"
   }
 }

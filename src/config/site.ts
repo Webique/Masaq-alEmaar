@@ -18,9 +18,9 @@ export const siteConfig = {
   },
 
   support: {
-    phone: "0507005801",
+    phone: "+966507005801",
     email: "info@masaq.com",
-    whatsapp: "0507005801",
+    whatsapp: "+966507005801",
     landline: ""
   },
 
