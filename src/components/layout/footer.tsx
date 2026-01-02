@@ -80,7 +80,7 @@ export default function Footer() {
             className="lg:col-span-5"
           >
             <div className="mb-6">
-              <Logo className="w-24 sm:w-24" />
+              <Logo className="w-28 sm:w-28" />
             </div>
 
             <p className="mb-6 max-w-md text-xs leading-relaxed text-white/60 sm:mb-8 sm:text-sm">

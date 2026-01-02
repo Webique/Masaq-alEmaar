@@ -75,7 +75,7 @@ export function ProcessSection() {
               whileInView={{ scaleX: 1 }}
               transition={{ duration: 1.5, delay: 0.3 }}
               viewport={{ once: true, margin: "-100px" }}
-              className="bg-linear-to-r to-secondary from-primary absolute left-0 right-0 top-20 h-0.5 origin-left"
+              className="to-secondary from-primary bg-linear-to-r absolute left-0 right-0 top-20 h-0.5 origin-left"
             />
 
             {/* Process Steps */}
@@ -116,7 +116,7 @@ export function ProcessSection() {
                         height="16"
                         viewBox="0 0 32 16"
                         fill="none"
-                        className="text-secondary rtl:rotate-180"
+                        className="text-secondary"
                       >
                         <path
                           d="M24 1L31 8L24 15M31 8H1"
@@ -153,7 +153,7 @@ export function ProcessSection() {
               whileInView={{ scaleY: 1 }}
               transition={{ duration: 1.5, delay: 0.3 }}
               viewport={{ once: true, margin: "-100px" }}
-              className="bg-linear-to-b to-secondary from-primary absolute bottom-0 left-8 top-0 w-0.5 origin-top"
+              className="to-secondary from-primary bg-linear-to-b absolute bottom-0 left-8 top-0 w-0.5 origin-top"
             />
 
             {/* Process Steps */}

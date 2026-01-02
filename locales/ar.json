@@ -34,29 +34,7 @@
       "projectImage1Alt": "مثال مشروع إنشاءات سكنية 1",
       "projectImage2Alt": "مثال مشروع إنشاءات تجارية 2",
       "projectImage3Alt": "مثال مشروع تصميم داخلي 3",
-      "projectImage4Alt": "مثال مشروع أعمال إنشائية 4",
-      "values": {
-        "quality": {
-          "title": "الجودة",
-          "description": "نستخدم أفضل المواد والتقنيات الحديثة",
-          "iconLabel": "أيقونة جودة الإنشاءات"
-        },
-        "innovation": {
-          "title": "الإبداع",
-          "description": "نقدم حلول مبتكرة تلبي احتياجات عملائنا",
-          "iconLabel": "أيقونة لمبة الإبداع"
-        },
-        "trust": {
-          "title": "الثقة",
-          "description": "نبني علاقات طويلة الأمد مع عملائنا",
-          "iconLabel": "أيقونة مصافحة الثقة"
-        },
-        "excellence": {
-          "title": "التميز",
-          "description": "نسعى للتفوق في كل مشروع نتولاه",
-          "iconLabel": "أيقونة نجمة التميز"
-        }
-      }
+      "projectImage4Alt": "مثال مشروع أعمال إنشائية 4"
     },
     "services": {
       "title": "خدماتنا",

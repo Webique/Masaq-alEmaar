@@ -30,7 +30,7 @@ export default function ScrollProgress() {
       transition={{ duration: 0.1 }}
     >
       <div
-        className="from-law-primary via-law-primary-light to-law-primary bg-linear-to-r h-full"
+        className="from-law-primary via-law-primary-light to-law-primary h-full bg-gradient-to-r"
         style={{ width: `${scrollProgress * 100}%` }}
       />
     </m.div>

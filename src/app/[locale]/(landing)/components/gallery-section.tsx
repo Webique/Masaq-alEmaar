@@ -239,7 +239,7 @@ export function GallerySection() {
               onClick={() => setSelectedCategory(category.key)}
               className={cn(
                 "rounded-full px-6 py-3 text-sm font-medium transition-all duration-300",
-                "transform border-2 hover:scale-105",
+                "flex transform items-center justify-center border-2 hover:scale-105",
                 selectedCategory === category.key
                   ? "bg-primary border-primary shadow-elegant text-white"
                   : "bg-background text-text border-border hover:border-primary/50 hover:bg-primary/5"
@@ -247,7 +247,7 @@ export function GallerySection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              {category.label}
+              <span className="inline-block">{category.label}</span>
             </m.button>
           ))}
         </m.div>
@@ -377,27 +377,29 @@ export function GallerySection() {
           <m.button
             className={cn(
               "bg-primary hover:bg-primary-dark text-white",
-              "inline-flex items-center rounded-full px-8 py-4",
+              "inline-flex items-center justify-center rounded-full px-8 py-4",
               "font-semibold transition-all duration-300",
               "hover:shadow-elegant transform hover:scale-105"
             )}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span>{t("viewAll")}</span>
-            <svg
-              className="h-5 w-5 ltr:ml-3 rtl:mr-3 rtl:rotate-180"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
+            <span className="inline-flex items-center gap-3">
+              <span>{t("viewAll")}</span>
+              <svg
+                className="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </span>
           </m.button>
         </m.div>
       </div>

@@ -34,29 +34,7 @@
       "projectImage1Alt": "Residential construction project example 1",
       "projectImage2Alt": "Commercial construction project example 2",
       "projectImage3Alt": "Interior design project example 3",
-      "projectImage4Alt": "Structural work project example 4",
-      "values": {
-        "quality": {
-          "title": "Quality",
-          "description": "We use the finest materials and modern techniques",
-          "iconLabel": "Construction quality icon"
-        },
-        "innovation": {
-          "title": "Innovation",
-          "description": "We provide innovative solutions that meet our clients' needs",
-          "iconLabel": "Innovation lightbulb icon"
-        },
-        "trust": {
-          "title": "Trust",
-          "description": "We build long-term relationships with our clients",
-          "iconLabel": "Trust handshake icon"
-        },
-        "excellence": {
-          "title": "Excellence",
-          "description": "We strive for superiority in every project we undertake",
-          "iconLabel": "Excellence star icon"
-        }
-      }
+      "projectImage4Alt": "Structural work project example 4"
     },
     "services": {
       "title": "Our Services",

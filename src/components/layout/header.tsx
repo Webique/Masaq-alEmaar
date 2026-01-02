@@ -51,7 +51,7 @@ export default function Header() {
       {/* Top accent line */}
       <div
         className={cn(
-          "bg-linear-to-r from-primary via-accent to-primary absolute inset-x-0 top-0 h-1 transition-opacity duration-500",
+          "from-primary via-accent to-primary bg-linear-to-r absolute inset-x-0 top-0 h-1 transition-opacity duration-500",
           "opacity-100 lg:opacity-0",
           isScrolled && "lg:opacity-100"
         )}
@@ -87,10 +87,13 @@ export default function Header() {
                 <Link
                   href={item.href}
                   className={cn(
-                    "text-secondary hover:text-primary group relative px-4 py-2 text-sm font-medium transition-all duration-300",
-                    "hover:bg-primary/10 focus:ring-primary rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2",
-                    "after:bg-primary after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:transition-all after:duration-300",
-                    "hover:after:w-3/4 hover:after:-translate-x-1/2"
+                    "group relative px-4 py-2 text-sm font-medium transition-all duration-300",
+                    "rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2",
+                    "after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:transition-all after:duration-300",
+                    "hover:after:w-3/4 hover:after:-translate-x-1/2",
+                    isScrolled
+                      ? "text-secondary hover:text-primary hover:bg-primary/10 focus:ring-primary after:bg-primary"
+                      : "text-white after:bg-white hover:bg-white/10 hover:text-white focus:ring-white"
                   )}
                 >
                   <span className="relative z-10">{item.label}</span>
@@ -106,7 +109,7 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}
           >
-            <LocaleSwitcher isTop={true} />
+            <LocaleSwitcher isTop={isScrolled} />
 
             <Button
               size="lg"
@@ -118,22 +121,28 @@ export default function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={t("ctaAria")}
+                className="flex items-center justify-center"
               >
                 <WhatsAppIcon
                   className="h-4 w-4 transition-transform group-hover:scale-110"
                   aria-hidden="true"
                 />
-                {t("cta")}
+                <span className="inline-block">{t("cta")}</span>
               </Link>
             </Button>
           </m.div>
 
           {/* Mobile Menu Button */}
           <div className="flex items-center gap-2 lg:hidden">
-            <LocaleSwitcher className="w-auto" />
+            <LocaleSwitcher className="w-auto" isTop={isScrolled} />
 
             <button
-              className="text-secondary hover:bg-primary/10 focus:ring-primary rounded-lg p-2 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2"
+              className={cn(
+                "text-secondary hover:bg-primary/10 focus:ring-primary rounded-lg p-2 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2",
+                isScrolled
+                  ? "lg:text-secondary lg:hover:bg-primary/10 lg:focus:ring-primary"
+                  : "lg:text-white lg:hover:bg-white/10 lg:focus:ring-white"
+              )}
               onClick={toggleMenu}
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={isMenuOpen}
@@ -221,9 +230,10 @@ export default function Header() {
                   href={siteConfig.links.whatsapp}
                   onClick={() => setIsMenuOpen(false)}
                   aria-label={t("ctaAria")}
+                  className="flex items-center justify-center"
                 >
                   <MessageCircle className="h-5 w-5" aria-hidden="true" />
-                  {t("cta")}
+                  <span className="inline-block">{t("cta")}</span>
                 </a>
               </Button>
             </m.div>

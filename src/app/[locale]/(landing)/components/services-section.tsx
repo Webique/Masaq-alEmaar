@@ -164,7 +164,7 @@ export function ServicesSection() {
                     >
                       <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm">
                         <svg
-                          className="h-5 w-5 text-white rtl:rotate-180"
+                          className="h-5 w-5 text-white"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -214,7 +214,7 @@ export function ServicesSection() {
                               className={cn(
                                 "flex h-6 w-6 items-center justify-center rounded-full",
                                 "bg-primary/10 transition-colors duration-300",
-                                "group-hover:bg-primary/20 ltr:mr-3 rtl:ml-3"
+                                "group-hover:bg-primary/20 mr-3"
                               )}
                             >
                               <svg
@@ -254,7 +254,7 @@ export function ServicesSection() {
           <div
             className={cn(
               "mx-auto max-w-2xl rounded-2xl p-8",
-              "bg-linear-to-r from-primary/5 via-primary/10 to-primary/5",
+              "from-primary/5 via-primary/10 to-primary/5 bg-linear-to-r",
               "border-primary/20 border"
             )}
           >
@@ -266,27 +266,29 @@ export function ServicesSection() {
               href="#contact"
               className={cn(
                 "bg-primary hover:bg-primary-dark text-white",
-                "inline-flex items-center rounded-full px-8 py-4",
+                "inline-flex items-center justify-center rounded-full px-8 py-4",
                 "font-semibold transition-all duration-300",
                 "transform hover:scale-105 hover:shadow-lg"
               )}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span>{t("cta.button")}</span>
-              <svg
-                className="h-5 w-5 ltr:ml-2 rtl:mr-2 rtl:rotate-180"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
+              <span className="inline-flex items-center gap-2">
+                <span>{t("cta.button")}</span>
+                <svg
+                  className="h-5 w-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </span>
             </m.a>
           </div>
         </m.div>

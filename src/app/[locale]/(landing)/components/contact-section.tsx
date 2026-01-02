@@ -166,7 +166,7 @@ export function ContactSection() {
             {t("social.title")}
           </h3>
 
-          <div className="mb-12 flex justify-center space-x-6 rtl:space-x-reverse">
+          <div className="mb-12 flex justify-center space-x-6">
             {socialLinks.map((social, index) => (
               <m.a
                 key={social.label}
@@ -202,7 +202,7 @@ export function ContactSection() {
             whileTap={{ scale: 0.95 }}
             className="bg-primary text-primary-foreground hover:bg-primary/90 inline-flex items-center justify-center rounded-xl px-8 py-4 text-lg font-semibold shadow-lg transition-all duration-300 hover:shadow-xl"
           >
-            <WhatsAppIcon className="mr-3 h-6 w-6 rtl:ml-3 rtl:mr-0" />
+            <WhatsAppIcon className="mr-3 h-6 w-6" />
             {t("cta")}
           </m.a>
         </m.div>
