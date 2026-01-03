@@ -3,41 +3,184 @@
 import * as m from "motion/react-m";
 import ExportedImage from "next-image-export-optimizer";
 import { useTranslations } from "next-intl";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 import { cn } from "@/lib/utils";
 
 interface GalleryImage {
   src: string;
-  alt: string;
   id: number;
   category: "residential" | "commercial" | "interior" | "structural";
 }
+
+// Gallery images with manual category assignment - moved outside component for stability
+const galleryImages: GalleryImage[] = [
+  {
+    src: "/images/gallery/1.jpeg",
+    id: 1,
+    category: "structural"
+  },
+  {
+    src: "/images/gallery/2.jpeg",
+    id: 2,
+    category: "structural"
+  },
+  {
+    src: "/images/gallery/3.jpeg",
+    id: 3,
+    category: "residential"
+  },
+  {
+    src: "/images/gallery/4.jpeg",
+    id: 4,
+    category: "residential"
+  },
+  {
+    src: "/images/gallery/5.jpeg",
+    id: 5,
+    category: "residential"
+  },
+
+  {
+    src: "/images/gallery/6.jpeg",
+    id: 6,
+    category: "residential"
+  },
+  {
+    src: "/images/gallery/7.jpeg",
+    id: 7,
+    category: "structural"
+  },
+  {
+    src: "/images/gallery/8.jpeg",
+    id: 8,
+    category: "structural"
+  },
+  {
+    src: "/images/gallery/9.jpeg",
+    id: 9,
+    category: "interior"
+  },
+  {
+    src: "/images/gallery/10.jpeg",
+    id: 10,
+    category: "interior"
+  },
+
+  {
+    src: "/images/gallery/11.jpeg",
+    id: 11,
+    category: "interior"
+  },
+  {
+    src: "/images/gallery/12.jpeg",
+    id: 12,
+    category: "interior"
+  },
+  {
+    src: "/images/gallery/13.jpeg",
+    id: 13,
+    category: "interior"
+  },
+  {
+    src: "/images/gallery/14.jpeg",
+    id: 14,
+    category: "interior"
+  },
+  {
+    src: "/images/gallery/15.jpeg",
+    id: 15,
+    category: "interior"
+  },
+
+  {
+    src: "/images/gallery/16.jpeg",
+    id: 16,
+    category: "interior"
+  },
+  {
+    src: "/images/gallery/17.jpeg",
+    id: 17,
+    category: "interior"
+  },
+  {
+    src: "/images/gallery/18.jpeg",
+    id: 18,
+    category: "commercial"
+  },
+  {
+    src: "/images/gallery/19.jpeg",
+    id: 19,
+    category: "commercial"
+  },
+  {
+    src: "/images/gallery/20.jpeg",
+    id: 20,
+    category: "commercial"
+  },
+
+  {
+    src: "/images/gallery/21.jpeg",
+    id: 21,
+    category: "commercial"
+  },
+  {
+    src: "/images/gallery/22.jpeg",
+    id: 22,
+    category: "commercial"
+  },
+  {
+    src: "/images/gallery/23.jpeg",
+    id: 23,
+    category: "commercial"
+  },
+  {
+    src: "/images/gallery/24.jpeg",
+    id: 24,
+    category: "commercial"
+  },
+  {
+    src: "/images/gallery/25.jpeg",
+    id: 25,
+    category: "commercial"
+  },
+  {
+    src: "/images/gallery/26.jpeg",
+    id: 26,
+    category: "commercial"
+  },
+  {
+    src: "/images/gallery/27.jpeg",
+    id: 27,
+    category: "commercial"
+  },
+  {
+    src: "/images/gallery/28.jpeg",
+    id: 28,
+    category: "interior"
+  },
+  {
+    src: "/images/gallery/29.jpeg",
+    id: 29,
+    category: "residential"
+  },
+  {
+    src: "/images/gallery/30.jpeg",
+    id: 30,
+    category: "residential"
+  },
+  {
+    src: "/images/gallery/31.jpeg",
+    id: 31,
+    category: "residential"
+  }
+];
 
 export function GallerySection() {
   const t = useTranslations("IndexPage.gallery");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
-
-  // Generate all 31 gallery images automatically with categories
-  const galleryImages: GalleryImage[] = Array.from(
-    { length: 31 },
-    (_, index) => {
-      // Distribute images across categories
-      const categories: Array<
-        "residential" | "commercial" | "interior" | "structural"
-      > = ["residential", "commercial", "interior", "structural"];
-      const category = categories[index % 4];
-
-      return {
-        src: `/images/gallery/${index + 1}.jpeg`,
-        alt: `${category} project ${index + 1}`,
-        id: index + 1,
-        category
-      };
-    }
-  );
 
   const categories = [
     { key: "all", label: t("allProjects") },
@@ -47,10 +190,18 @@ export function GallerySection() {
     { key: "structural", label: t("categories.structural") }
   ];
 
-  const filteredImages =
-    selectedCategory === "all"
-      ? galleryImages
-      : galleryImages.filter((img) => img.category === selectedCategory);
+  // Helper function to generate alt text based on category
+  const getImageAlt = (image: GalleryImage) => {
+    return `${t(`categories.${image.category}`)} project ${image.id}`;
+  };
+
+  const filteredImages = useMemo(
+    () =>
+      selectedCategory === "all"
+        ? galleryImages
+        : galleryImages.filter((img) => img.category === selectedCategory),
+    [selectedCategory]
+  );
 
   // Show different number of images based on screen size
   const getInitialImageCount = () => {
@@ -77,7 +228,7 @@ export function GallerySection() {
   }, []);
 
   // Show only initial count images for display
-  const displayedImages = filteredImages.slice(0, initialCount);
+  const displayedImages: GalleryImage[] = filteredImages.slice(0, initialCount);
 
   // Reset category selection
   const handleCategoryChange = (categoryKey: string) => {
@@ -250,7 +401,7 @@ export function GallerySection() {
                 <div className="aspect-4/3 relative overflow-hidden">
                   <ExportedImage
                     src={image.src}
-                    alt={image.alt}
+                    alt={getImageAlt(image)}
                     width={400}
                     height={300}
                     className={cn(
@@ -464,7 +615,7 @@ export function GallerySection() {
             <div className="relative">
               <ExportedImage
                 src={selectedImage.src}
-                alt={selectedImage.alt}
+                alt={getImageAlt(selectedImage)}
                 width={1200}
                 height={800}
                 className="block h-auto max-h-[70vh] w-full object-contain"
