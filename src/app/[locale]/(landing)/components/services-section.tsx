@@ -33,7 +33,7 @@ export function ServicesSection() {
     {
       key: "turnkey" as const,
       icon: Key,
-      image: "/images/WhatsApp Image 2026-01-02 at 21.21.49 (1).jpeg",
+      image: "/images/6.jpeg",
       gradient: "from-emerald-500/20 to-green-500/20"
     }
   ];
