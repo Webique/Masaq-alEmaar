@@ -125,71 +125,13 @@
         "interior": "تصميم داخلي",
         "structural": "أعمال إنشائية"
       },
-      "viewAll": "عرض جميع الأعمال",
-      "viewProject": "عرض المشروع",
       "allProjects": "جميع المشاريع",
-      "images": {
-        "modernVilla": {
-          "title": "تصميم فيلا عصرية",
-          "description": "معمار سكني معاصر بتشطيبات أنيقة"
-        },
-        "familyHome": {
-          "title": "منزل عائلي داخلي",
-          "description": "مساحات معيشة عائلية واسعة ومريحة"
-        },
-        "masterBedroom": {
-          "title": "جناح غرفة النوم الرئيسية",
-          "description": "غرفة نوم فاخرة بوسائل راحة عصرية"
-        },
-        "modernKitchen": {
-          "title": "تصميم مطبخ عصري",
-          "description": "مساحة مطبخ عملية وأنيقة"
-        },
-        "officeComplex": {
-          "title": "مجمع مكاتب",
-          "description": "مبنى تجاري عصري بتصميم مهني"
-        },
-        "businessCenter": {
-          "title": "مركز أعمال داخلي",
-          "description": "مساحة عمل مهنية بتشطيبات معاصرة"
-        },
-        "retailShowroom": {
-          "title": "صالة عرض تجارية",
-          "description": "مساحة تجارية جذابة للأعمال التجارية"
-        },
-        "elegantInterior": {
-          "title": "تصميم داخلي أنيق",
-          "description": "تصميم داخلي راقي بمواد فاخرة"
-        },
-        "contemporaryLiving": {
-          "title": "مساحة معيشة معاصرة",
-          "description": "تصميم داخلي عصري بخطوط نظيفة"
-        },
-        "diningRoom": {
-          "title": "تصميم غرفة طعام",
-          "description": "مساحة طعام أنيقة بأثاث مخصص"
-        },
-        "luxuryBathroom": {
-          "title": "حمام فاخر",
-          "description": "حمام فاخر بتجهيزات عصرية"
-        },
-        "foundationWork": {
-          "title": "أعمال الأساسات",
-          "description": "إنشاءات أساسات وهياكل مهنية"
-        },
-        "structuralFramework": {
-          "title": "الهيكل الإنشائي",
-          "description": "إنشاء هيكل خرساني مسلح"
-        },
-        "constructionProgress": {
-          "title": "تقدم الإنشاءات",
-          "description": "إدارة وتنفيذ إنشائي مهني"
-        },
-        "completedStructure": {
-          "title": "هيكل مكتمل",
-          "description": "إنجاز أعمال إنشائية عالية الجودة"
-        }
-      }
+      "totalImages": "عرض {count} مشروع مكتمل",
+      "imageTitle": "مشروع رقم {number}",
+      "imageCounter": "{current} من {total}",
+      "navigationHint": "اسحب أو استخدم أزرار الأسهم للتنقل",
+      "viewAll": "عرض جميع المشاريع",
+      "viewProject": "عرض المشروع"
     },
     "contact": {
       "title": "تواصل معنا",

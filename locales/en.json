@@ -125,71 +125,13 @@
         "interior": "Interior Design",
         "structural": "Structural Work"
       },
-      "viewAll": "View All Work",
-      "viewProject": "View Project",
       "allProjects": "All Projects",
-      "images": {
-        "modernVilla": {
-          "title": "Modern Villa Design",
-          "description": "Contemporary residential architecture with elegant finishes"
-        },
-        "familyHome": {
-          "title": "Family Home Interior",
-          "description": "Spacious and comfortable family living areas"
-        },
-        "masterBedroom": {
-          "title": "Master Bedroom Suite",
-          "description": "Luxurious bedroom with modern amenities"
-        },
-        "modernKitchen": {
-          "title": "Modern Kitchen Design",
-          "description": "Functional and stylish kitchen space"
-        },
-        "officeComplex": {
-          "title": "Office Complex",
-          "description": "Modern commercial building with professional design"
-        },
-        "businessCenter": {
-          "title": "Business Center Interior",
-          "description": "Professional workspace with contemporary finishes"
-        },
-        "retailShowroom": {
-          "title": "Retail Showroom",
-          "description": "Attractive commercial space for retail business"
-        },
-        "elegantInterior": {
-          "title": "Elegant Interior Design",
-          "description": "Sophisticated interior with premium materials"
-        },
-        "contemporaryLiving": {
-          "title": "Contemporary Living Space",
-          "description": "Modern interior design with clean lines"
-        },
-        "diningRoom": {
-          "title": "Dining Room Design",
-          "description": "Elegant dining space with custom furniture"
-        },
-        "luxuryBathroom": {
-          "title": "Luxury Bathroom",
-          "description": "Premium bathroom with modern fixtures"
-        },
-        "foundationWork": {
-          "title": "Foundation Work",
-          "description": "Professional foundation and structural construction"
-        },
-        "structuralFramework": {
-          "title": "Structural Framework",
-          "description": "Reinforced concrete structure construction"
-        },
-        "constructionProgress": {
-          "title": "Construction Progress",
-          "description": "Professional construction management and execution"
-        },
-        "completedStructure": {
-          "title": "Completed Structure",
-          "description": "High-quality structural work completion"
-        }
-      }
+      "totalImages": "Showcasing {count} completed projects",
+      "imageTitle": "Project #{number}",
+      "imageCounter": "{current} of {total}",
+      "navigationHint": "Swipe or use arrow keys to navigate",
+      "viewAll": "View All Projects",
+      "viewProject": "View Project"
     },
     "contact": {
       "title": "Contact Us",

@@ -3,139 +3,41 @@
 import * as m from "motion/react-m";
 import ExportedImage from "next-image-export-optimizer";
 import { useTranslations } from "next-intl";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
-import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
 interface GalleryImage {
   src: string;
   alt: string;
+  id: number;
   category: "residential" | "commercial" | "interior" | "structural";
-  title: string;
-  description: string;
 }
 
 export function GallerySection() {
   const t = useTranslations("IndexPage.gallery");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
 
-  // Gallery images organized by categories
-  const galleryImages: GalleryImage[] = [
-    // Residential Projects
-    {
-      src: "/images/gallery/1.jpeg",
-      alt: "Luxury residential villa exterior",
-      category: "residential",
-      title: t("images.modernVilla.title"),
-      description: t("images.modernVilla.description")
-    },
-    {
-      src: "/images/WhatsApp Image 2026-01-02 at 21.21.45.jpeg",
-      alt: "Residential interior living space",
-      category: "residential",
-      title: t("images.familyHome.title"),
-      description: t("images.familyHome.description")
-    },
-    {
-      src: "/images/gallery/2.jpeg",
-      alt: "Residential bedroom design",
-      category: "residential",
-      title: t("images.masterBedroom.title"),
-      description: t("images.masterBedroom.description")
-    },
-    {
-      src: "/images/WhatsApp Image 2026-01-02 at 21.21.45 (2).jpeg",
-      alt: "Residential kitchen design",
-      category: "residential",
-      title: t("images.modernKitchen.title"),
-      description: t("images.modernKitchen.description")
-    },
+  // Generate all 31 gallery images automatically with categories
+  const galleryImages: GalleryImage[] = Array.from(
+    { length: 31 },
+    (_, index) => {
+      // Distribute images across categories
+      const categories: Array<
+        "residential" | "commercial" | "interior" | "structural"
+      > = ["residential", "commercial", "interior", "structural"];
+      const category = categories[index % 4];
 
-    // Commercial Projects
-    {
-      src: "/images/WhatsApp Image 2026-01-02 at 21.21.46.jpeg",
-      alt: "Commercial building exterior",
-      category: "commercial",
-      title: t("images.officeComplex.title"),
-      description: t("images.officeComplex.description")
-    },
-    {
-      src: "/images/WhatsApp Image 2026-01-02 at 21.21.46 (1).jpeg",
-      alt: "Commercial interior space",
-      category: "commercial",
-      title: t("images.businessCenter.title"),
-      description: t("images.businessCenter.description")
-    },
-    {
-      src: "/images/WhatsApp Image 2026-01-02 at 21.21.46 (2).jpeg",
-      alt: "Commercial retail space",
-      category: "commercial",
-      title: t("images.retailShowroom.title"),
-      description: t("images.retailShowroom.description")
-    },
-
-    // Interior Design
-    {
-      src: "/images/WhatsApp Image 2026-01-02 at 21.21.47.jpeg",
-      alt: "Luxury interior design",
-      category: "interior",
-      title: t("images.elegantInterior.title"),
-      description: t("images.elegantInterior.description")
-    },
-    {
-      src: "/images/gallery/3.jpeg",
-      alt: "Modern interior living room",
-      category: "interior",
-      title: t("images.contemporaryLiving.title"),
-      description: t("images.contemporaryLiving.description")
-    },
-    {
-      src: "/images/WhatsApp Image 2026-01-02 at 21.21.47 (2).jpeg",
-      alt: "Interior dining area",
-      category: "interior",
-      title: t("images.diningRoom.title"),
-      description: t("images.diningRoom.description")
-    },
-    {
-      src: "/images/WhatsApp Image 2026-01-02 at 21.21.47 (3).jpeg",
-      alt: "Interior bathroom design",
-      category: "interior",
-      title: t("images.luxuryBathroom.title"),
-      description: t("images.luxuryBathroom.description")
-    },
-
-    // Structural Work
-    {
-      src: "/images/WhatsApp Image 2026-01-02 at 21.21.48.jpeg",
-      alt: "Construction structural work",
-      category: "structural",
-      title: t("images.foundationWork.title"),
-      description: t("images.foundationWork.description")
-    },
-    {
-      src: "/images/WhatsApp Image 2026-01-02 at 21.21.48 (1).jpeg",
-      alt: "Building structure progress",
-      category: "structural",
-      title: t("images.structuralFramework.title"),
-      description: t("images.structuralFramework.description")
-    },
-    {
-      src: "/images/gallery/5.jpeg",
-      alt: "Construction site progress",
-      category: "structural",
-      title: t("images.constructionProgress.title"),
-      description: t("images.constructionProgress.description")
-    },
-    {
-      src: "/images/gallery/6.jpeg",
-      alt: "Completed structural work",
-      category: "structural",
-      title: t("images.completedStructure.title"),
-      description: t("images.completedStructure.description")
+      return {
+        src: `/images/gallery/${index + 1}.jpeg`,
+        alt: `${category} project ${index + 1}`,
+        id: index + 1,
+        category
+      };
     }
-  ];
+  );
 
   const categories = [
     { key: "all", label: t("allProjects") },
@@ -150,13 +52,76 @@ export function GallerySection() {
       ? galleryImages
       : galleryImages.filter((img) => img.category === selectedCategory);
 
-  const openLightbox = (image: GalleryImage) => {
+  // Show different number of images based on screen size
+  const getInitialImageCount = () => {
+    if (typeof window !== "undefined") {
+      const width = window.innerWidth;
+      if (width < 640) return 6; // Mobile: 6 images (2 columns × 3 rows)
+      if (width < 1024) return 8; // Tablet: 8 images (2 columns × 4 rows)
+      if (width < 1280) return 9; // Desktop: 9 images (3 columns × 3 rows)
+      return 12; // Large desktop: 12 images (4 columns × 3 rows)
+    }
+    return 12; // Default for SSR
+  };
+
+  const [initialCount, setInitialCount] = useState(getInitialImageCount());
+
+  // Update initial count on window resize
+  useEffect(() => {
+    const handleResize = () => {
+      setInitialCount(getInitialImageCount());
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Show only initial count images for display
+  const displayedImages = filteredImages.slice(0, initialCount);
+
+  // Reset category selection
+  const handleCategoryChange = (categoryKey: string) => {
+    setSelectedCategory(categoryKey);
+  };
+
+  const openLightbox = (image: GalleryImage, index: number) => {
     setSelectedImage(image);
+    setCurrentImageIndex(index);
   };
 
   const closeLightbox = () => {
     setSelectedImage(null);
   };
+
+  const navigateImage = useCallback(
+    (direction: "prev" | "next") => {
+      if (!selectedImage) return;
+
+      const newIndex =
+        direction === "next"
+          ? (currentImageIndex + 1) % filteredImages.length
+          : (currentImageIndex - 1 + filteredImages.length) %
+            filteredImages.length;
+
+      setCurrentImageIndex(newIndex);
+      setSelectedImage(filteredImages[newIndex]);
+    },
+    [selectedImage, currentImageIndex, filteredImages]
+  );
+
+  // Handle keyboard navigation
+  useEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (!selectedImage) return;
+
+      if (e.key === "ArrowLeft") navigateImage("prev");
+      if (e.key === "ArrowRight") navigateImage("next");
+      if (e.key === "Escape") closeLightbox();
+    };
+
+    window.addEventListener("keydown", handleKeyPress);
+    return () => window.removeEventListener("keydown", handleKeyPress);
+  }, [selectedImage, currentImageIndex, navigateImage]);
 
   // Handle body overflow when lightbox is open
   useEffect(() => {
@@ -236,7 +201,7 @@ export function GallerySection() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
               viewport={{ once: true }}
-              onClick={() => setSelectedCategory(category.key)}
+              onClick={() => handleCategoryChange(category.key)}
               className={cn(
                 "rounded-full px-6 py-3 text-sm font-medium transition-all duration-300",
                 "flex transform items-center justify-center border-2 hover:scale-105",
@@ -260,7 +225,7 @@ export function GallerySection() {
           viewport={{ once: true }}
           className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
         >
-          {filteredImages.map((image, index) => (
+          {displayedImages.map((image, index) => (
             <m.div
               key={`${image.src}-${selectedCategory}`}
               initial={{ opacity: 0, y: 50, scale: 0.9 }}
@@ -272,14 +237,14 @@ export function GallerySection() {
               }}
               viewport={{ once: true, margin: "-50px" }}
               className="group cursor-pointer"
-              onClick={() => openLightbox(image)}
+              onClick={() => openLightbox(image, index)}
             >
-              <Card
+              <div
                 className={cn(
-                  "border-border/50 bg-background/80 overflow-hidden",
+                  "border-border/50 bg-background/80 overflow-hidden rounded-xl",
                   "transform transition-all duration-500 hover:scale-[1.02]",
                   "hover:shadow-elegant hover:border-primary/30",
-                  "backdrop-blur-sm"
+                  "shadow-lg backdrop-blur-sm"
                 )}
               >
                 <div className="aspect-4/3 relative overflow-hidden">
@@ -346,27 +311,26 @@ export function GallerySection() {
                       </svg>
                     </div>
                   </div>
-                </div>
 
-                <CardContent className="p-4">
-                  <h3
-                    className={cn(
-                      "text-primary mb-2 text-lg font-semibold",
-                      "group-hover:text-primary-dark transition-colors duration-300"
-                    )}
-                  >
-                    {image.title}
-                  </h3>
-                  <p className="text-light text-sm leading-relaxed">
-                    {image.description}
-                  </p>
-                </CardContent>
-              </Card>
+                  {/* Image Number Badge */}
+                  <div className="absolute bottom-3 left-3">
+                    <span
+                      className={cn(
+                        "rounded-full bg-black/50 px-2 py-1 text-xs font-medium text-white",
+                        "backdrop-blur-sm transition-all duration-300",
+                        "translate-y-2 transform opacity-0 group-hover:translate-y-0 group-hover:opacity-100"
+                      )}
+                    >
+                      #{image.id}
+                    </span>
+                  </div>
+                </div>
+              </div>
             </m.div>
           ))}
         </m.div>
 
-        {/* View All CTA */}
+        {/* View All CTA - Opens Lightbox */}
         <m.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -375,6 +339,7 @@ export function GallerySection() {
           className="mt-16 text-center"
         >
           <m.button
+            onClick={() => openLightbox(filteredImages[0], 0)}
             className={cn(
               "bg-primary hover:bg-primary-dark text-white",
               "inline-flex items-center justify-center rounded-full px-8 py-4",
@@ -404,13 +369,13 @@ export function GallerySection() {
         </m.div>
       </div>
 
-      {/* Lightbox Modal */}
+      {/* Lightbox Modal - Simple Version */}
       {selectedImage && (
         <m.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4 backdrop-blur-sm"
           onClick={closeLightbox}
         >
           <m.div
@@ -418,20 +383,21 @@ export function GallerySection() {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="relative mx-4 max-w-4xl overflow-hidden rounded-2xl bg-white shadow-2xl"
+            className="relative w-full max-w-6xl overflow-hidden rounded-2xl bg-white shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
             <button
               onClick={closeLightbox}
               className={cn(
-                "absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center",
+                "absolute right-2 top-2 z-20 flex h-10 w-10 items-center justify-center",
+                "sm:right-4 sm:top-4 sm:h-12 sm:w-12",
                 "rounded-full bg-black/50 text-white backdrop-blur-sm",
                 "transition-all duration-300 hover:bg-black/70"
               )}
             >
               <svg
-                className="h-6 w-6"
+                className="h-5 w-5 sm:h-6 sm:w-6"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -445,6 +411,55 @@ export function GallerySection() {
               </svg>
             </button>
 
+            {/* Navigation Buttons */}
+            <button
+              onClick={() => navigateImage("prev")}
+              className={cn(
+                "absolute left-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center",
+                "sm:left-4 sm:h-12 sm:w-12",
+                "rounded-full bg-black/50 text-white backdrop-blur-sm",
+                "transition-all duration-300 hover:bg-black/70"
+              )}
+            >
+              <svg
+                className="h-5 w-5 sm:h-6 sm:w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+
+            <button
+              onClick={() => navigateImage("next")}
+              className={cn(
+                "absolute right-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center",
+                "sm:right-4 sm:h-12 sm:w-12",
+                "rounded-full bg-black/50 text-white backdrop-blur-sm",
+                "transition-all duration-300 hover:bg-black/70"
+              )}
+            >
+              <svg
+                className="h-5 w-5 sm:h-6 sm:w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+
             {/* Image */}
             <div className="relative">
               <ExportedImage
@@ -452,29 +467,31 @@ export function GallerySection() {
                 alt={selectedImage.alt}
                 width={1200}
                 height={800}
-                className="block h-auto max-h-[70vh] w-full object-cover"
-                sizes="(max-width: 896px) 90vw, 896px"
+                className="block h-auto max-h-[70vh] w-full object-contain"
+                sizes="(max-width: 768px) 95vw, (max-width: 1024px) 90vw, 1200px"
               />
             </div>
 
             {/* Image Info */}
-            <div className="p-6">
-              <div className="mb-2 flex items-center justify-between gap-2">
-                <h3 className="text-primary text-2xl font-bold">
-                  {selectedImage.title}
-                </h3>
-                <span
-                  className={cn(
-                    "bg-primary/10 rounded-full px-3 py-1 text-sm font-medium",
-                    "text-primary"
-                  )}
-                >
-                  {t(`categories.${selectedImage.category}`)}
-                </span>
+            <div className="border-t border-gray-100 p-4 sm:p-6">
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+                <div className="flex-1">
+                  <h3 className="text-primary text-lg font-bold sm:text-2xl">
+                    {t("imageTitle", { number: selectedImage.id })}
+                  </h3>
+                  <p className="text-light text-xs sm:text-sm">
+                    {t("imageCounter", {
+                      current: currentImageIndex + 1,
+                      total: filteredImages.length
+                    })}
+                  </p>
+                </div>
+                <div className="text-left sm:text-right">
+                  <p className="text-light hidden text-xs sm:block sm:text-sm">
+                    Use arrow keys or buttons to navigate
+                  </p>
+                </div>
               </div>
-              <p className="text-light text-base leading-relaxed">
-                {selectedImage.description}
-              </p>
             </div>
           </m.div>
         </m.div>
