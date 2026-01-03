@@ -21,19 +21,19 @@ export function ServicesSection() {
     {
       key: "structural" as const,
       icon: Hammer,
-      image: "/images/gallery/4.jpeg",
+      image: "/images/gallery/8.jpeg",
       gradient: "from-gray-500/20 to-slate-500/20"
     },
     {
       key: "finishing" as const,
       icon: Palette,
-      image: "/images/gallery/5.jpeg",
+      image: "/images/gallery/7.jpeg",
       gradient: "from-amber-500/20 to-orange-500/20"
     },
     {
       key: "turnkey" as const,
       icon: Key,
-      image: "/images/6.jpeg",
+      image: "/images/gallery/1.jpeg",
       gradient: "from-emerald-500/20 to-green-500/20"
     }
   ];
