@@ -70,7 +70,7 @@ const galleryImages: GalleryImage[] = [
   {
     src: "/images/gallery/11.jpeg",
     id: 11,
-    category: "interior"
+    category: "structural"
   },
   {
     src: "/images/gallery/12.jpeg",
@@ -526,7 +526,7 @@ export function GallerySection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/15 p-4 backdrop-blur-sm"
           onClick={closeLightbox}
         >
           <m.div
@@ -639,7 +639,7 @@ export function GallerySection() {
                 </div>
                 <div className="text-left sm:text-right">
                   <p className="text-light hidden text-xs sm:block sm:text-sm">
-                    Use arrow keys or buttons to navigate
+                    {t("lightboxNavigation")}
                   </p>
                 </div>
               </div>

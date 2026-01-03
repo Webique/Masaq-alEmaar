@@ -130,6 +130,7 @@
       "imageTitle": "مشروع رقم {number}",
       "imageCounter": "{current} من {total}",
       "navigationHint": "اسحب أو استخدم أزرار الأسهم للتنقل",
+      "lightboxNavigation": "استخدم أزرار الأسهم أو الأزرار للتنقل",
       "viewAll": "عرض جميع المشاريع",
       "viewProject": "عرض المشروع"
     },

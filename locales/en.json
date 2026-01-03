@@ -130,6 +130,7 @@
       "imageTitle": "Project #{number}",
       "imageCounter": "{current} of {total}",
       "navigationHint": "Swipe or use arrow keys to navigate",
+      "lightboxNavigation": "Use arrow keys or buttons to navigate",
       "viewAll": "View All Projects",
       "viewProject": "View Project"
     },
