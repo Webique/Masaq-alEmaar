@@ -3,7 +3,7 @@ export const siteConfig = {
     instagram: "https://instagram.com/masaq.al",
     tiktok: "https://tiktok.com/@.masaq",
     whatsapp:
-      "https://wa.me/966507005801?text=مرحباً%20بك%20في%20مساق%20الأعمار%20للإنشاءات%20والمعمار"
+      "https://wa.me/966507005801?text=مرحباً%20بك%20في%20مساق%20الإعمار%20للإنشاءات%20والمعمار"
   },
 
   support: {

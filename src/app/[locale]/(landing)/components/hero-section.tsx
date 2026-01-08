@@ -86,7 +86,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-primary-light mb-8 inline-block rounded-full border border-white/20 bg-white/10 px-6 py-3 text-lg font-medium backdrop-blur-sm md:text-xl"
+            className="mb-8 inline-block rounded-xl border-2 border-white/40 bg-white/95 px-8 py-4 text-lg font-semibold text-gray-900 shadow-2xl backdrop-blur-md md:text-xl"
           >
             {t("tagline")}
           </m.p>
