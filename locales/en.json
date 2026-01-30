@@ -248,10 +248,77 @@
   },
   "PrivacyPage": {
     "title": "Privacy Policy",
-    "description": "Privacy policy for Masaq Al-Amaar website"
+    "description": "Privacy policy for Masaq Al-Amaar website",
+    "subtitle": "We are committed to protecting the privacy of our website visitors and customers",
+    "intro": "This policy explains how we collect and use personal data when you use our website or contact us.",
+    "sections": {
+      "dataCollection": {
+        "title": "1) Data We Collect",
+        "description": "We may collect the following data when you fill out a contact form or contact us via the website/WhatsApp:",
+        "items": ["Name", "Phone number", "Email (if provided)", "City/Project location", "Request or inquiry details"],
+        "technical": "Technical data may also be collected automatically such as: IP address and browser type to improve website performance."
+      },
+      "dataUsage": {
+        "title": "2) Data Usage",
+        "description": "We use your data for:",
+        "items": ["Responding to inquiries and providing offers", "Communicating with you regarding services", "Improving website and service experience"]
+      },
+      "dataSharing": {
+        "title": "3) Data Sharing",
+        "noSell": "We do not sell your data.",
+        "description": "Data may only be shared with technical service providers (such as hosting or analytics tools) when necessary to operate the website."
+      },
+      "dataProtection": {
+        "title": "4) Data Protection",
+        "description": "We apply appropriate measures to protect data from unauthorized access."
+      },
+      "rights": {
+        "title": "5) Your Rights",
+        "description": "You can request to modify or delete your data by contacting us."
+      },
+      "contact": {
+        "title": "6) Contact",
+        "description": "For any inquiries regarding the privacy policy:",
+        "whatsapp": "WhatsApp/Phone:",
+        "email": "Email:"
+      }
+    }
   },
   "TermsPage": {
     "title": "Terms and Conditions",
-    "description": "Terms and conditions for using Masaq Al-Amaar website"
+    "description": "Terms and conditions for using Masaq Al-Amaar website",
+    "subtitle": "Website and service usage terms",
+    "intro": "By using the website or contacting us through it, you agree to the following terms:",
+    "sections": {
+      "usage": {
+        "title": "1) Website Usage",
+        "description": "The website must be used properly. We reserve the right to update or modify website content at any time without prior notice."
+      },
+      "intellectual": {
+        "title": "2) Intellectual Property",
+        "description": "All website content (texts, designs, images, logo) is owned by Masaq Al-Amaar, and may not be copied or used without permission."
+      },
+      "services": {
+        "title": "3) Service Requests",
+        "items": ["Submitting a request through the website does not mean acceptance of execution.", "Prices, execution duration, and materials are determined after project review and issuance of an official quote/contract."]
+      },
+      "pricing": {
+        "title": "4) Pricing and Information",
+        "description": "Information displayed on the website is for informational purposes only and may vary according to project nature, and is not binding except with an approved contract or quote."
+      },
+      "modifications": {
+        "title": "5) Modifications",
+        "description": "Any modification requested by the client after agreement (design/materials/scope of work) may result in a change in price or execution duration and will not be executed except after approval."
+      },
+      "law": {
+        "title": "6) Applicable Law",
+        "description": "These terms are subject to the regulations of the Kingdom of Saudi Arabia."
+      },
+      "contact": {
+        "title": "7) Contact",
+        "whatsapp": "WhatsApp/Phone:",
+        "email": "Email:"
+      }
+    }
   }
 }
