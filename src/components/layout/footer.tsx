@@ -224,6 +224,22 @@ export default function Footer() {
           <p className="text-xs text-white/40">
             {t("copyright", { year: currentYear })}
           </p>
+          <div className="flex items-center gap-2 text-xs text-white/40 sm:gap-4">
+            <span className="hidden sm:inline">|</span>
+            <Link
+              href="/privacy"
+              className="transition-colors hover:text-white/60"
+            >
+              {t("privacy")}
+            </Link>
+            <span>|</span>
+            <Link
+              href="/terms"
+              className="transition-colors hover:text-white/60"
+            >
+              {t("terms")}
+            </Link>
+          </div>
         </m.div>
       </div>
     </footer>

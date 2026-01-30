@@ -235,7 +235,9 @@
     "allRightsReserved": "All rights reserved",
     "companyDescription": "Professional construction and architecture company specializing in integrated design and implementation of residential and commercial projects with excellence and quality.",
     "followUs": "Follow Us",
-    "tagline": "Building Excellence, Creating Dreams"
+    "tagline": "Building Excellence, Creating Dreams",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions"
   },
   "SkipLinks": {
     "mainContent": "Skip to main content",
@@ -243,5 +245,13 @@
     "services": "Skip to services",
     "gallery": "Skip to gallery",
     "contact": "Skip to contact"
+  },
+  "PrivacyPage": {
+    "title": "Privacy Policy",
+    "description": "Privacy policy for Masaq Al-Amaar website"
+  },
+  "TermsPage": {
+    "title": "Terms and Conditions",
+    "description": "Terms and conditions for using Masaq Al-Amaar website"
   }
 }
