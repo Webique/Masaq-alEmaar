@@ -243,4 +243,15 @@
     "mainContent": "Skip to main content",
     "navigation": "Skip to navigation",
     "services": "Skip to services",
-    
+    "gallery": "Skip to gallery",
+    "contact": "Skip to contact"
+  },
+  "PrivacyPage": {
+    "title": "Privacy Policy",
+    "description": "Privacy policy for Masaq Al-Amaar website"
+  },
+  "TermsPage": {
+    "title": "Terms and Conditions",
+    "description": "Terms and conditions for using Masaq Al-Amaar website"
+  }
+}
